@@ -2,12 +2,17 @@ import bwmap from './backgrounds/bw-map.jpeg';
 import nairobi from './backgrounds/nairobi.png';
 import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
+import darkbg from './backgrounds/dark-bg.jpg';
 
-import logo from './logo/logo-black.png';
+import logo from './logo/logo.png';
 import logotext from './logo/logo-text-black.png';
+import mygithub from './logo/github.png';
+import linkedin from './logo/linkedin.png';
 
 import shaq from './personal/shaq.png';
+import bean from './personal/bean.gif';
 
+import arrow from './icons/arrow.png';
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
 import frontend from './icons/frontend.png';
@@ -55,9 +60,14 @@ export {
   nairobi,
   whiteabstract,
   worldmap,
+  darkbg,
   logo,
   logotext,
   shaq,
+  bean,
+  mygithub,
+  linkedin,
+  arrow,
   backend,
   ux,
   frontend,
