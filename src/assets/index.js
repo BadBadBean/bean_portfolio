@@ -3,6 +3,7 @@ import nairobi from './backgrounds/nairobi.png';
 import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 import darkbg from './backgrounds/dark-bg.jpg';
+import techbg from './backgrounds/bg-tech.jpg';
 
 import logo from './logo/logo.png';
 import logotext from './logo/logo-text-black.png';
@@ -61,6 +62,7 @@ export {
   whiteabstract,
   worldmap,
   darkbg,
+  techbg,
   logo,
   logotext,
   shaq,

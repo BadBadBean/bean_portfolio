@@ -1,3 +1,4 @@
-import BallCanvas from './Ball';
+import BoxCanva from './Box';
 
-export { BallCanvas };
+export { BoxCanva };
+

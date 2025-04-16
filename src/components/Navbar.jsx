@@ -7,11 +7,24 @@ import { close, menu, logo, mygithub, linkedin } from '../assets';
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <nav
       className={`${styles.paddingX} w-full font-jersey flex items-center py-2 fixed 
-      top-0 z-20 sm:opacity-[0.97] xxs:h-[12vh]`}>
+      top-0 z-20 sm:opacity-[0.97] xxs:h-[12vh] transition-all duration-300 ${
+        scrolled ? 'h-14 bg-gradient-to-t from-sky-500 to-indigo-500 shadow-md' : 'bg-transparent'
+      }`}>
       <div className="w-full mx-auto flex justify-between items-center">
         {/* Logo à gauche */}
         <Link
