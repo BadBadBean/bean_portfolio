@@ -3,6 +3,7 @@ import {
   backend,
   ux,
   prototyping,
+  bootstrap,
   javascript,
   typescript,
   html,
@@ -13,6 +14,11 @@ import {
   nodejs,
   git,
   figma,
+  jquery,
+  notion,
+  prestashop,
+  sass,
+  wordpress,
   docker,
   postgresql,
   rubyrails,
@@ -23,6 +29,7 @@ import {
   movie,
   nyeusi,
   space,
+  booki,
   coverhunt,
   dcc,
   kelhel,
@@ -73,12 +80,28 @@ const technologies = [
     icon: css,
   },
   {
+    name: 'Sass',
+    icon: sass,
+  },
+  {
     name: 'JavaScript',
     icon: javascript,
   },
   {
     name: 'TypeScript',
     icon: typescript,
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: tailwind,
+  },
+  {
+    name: 'Bootstrap',
+    icon: bootstrap,
+  },
+  {
+    name: 'git',
+    icon: git,
   },
   {
     name: 'React JS',
@@ -89,38 +112,31 @@ const technologies = [
     icon: redux,
   },
   {
-    name: 'Tailwind CSS',
-    icon: tailwind,
-  },
-  {
     name: 'Node JS',
     icon: nodejs,
   },
   {
-    name: 'Rails',
-    icon: rubyrails,
+    name: 'Jquery',
+    icon: jquery,
   },
   {
-    name: 'graphql',
-    icon: graphql,
+    name: 'Prestashop',
+    icon: prestashop,
   },
   {
-    name: 'postgresql',
-    icon: postgresql,
-  },
-  {
-    name: 'git',
-    icon: git,
+    name: 'WordPress',
+    icon: wordpress,
   },
   {
     name: 'figma',
     icon: figma,
   },
   {
-    name: 'docker',
-    icon: docker,
+    name: 'Notion',
+    icon: notion,
   },
 ];
+
 
 const experiences = [
   {
@@ -156,7 +172,7 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
-    name: 'KomiKult',
+    name: 'Booki',
     description: 'A comic characters list app that displays Marvel characters.',
     tags: [
       {
@@ -173,8 +189,8 @@ const projects = [
       },
     ],
     image: komikult,
-    repo: 'https://github.com/shaqdeff/KomiKult',
-    demo: 'https://shaqdeff.github.io/KomiKult/',
+    repo: 'https://github.com/BadBadBean/Booki',
+    demo: 'https://badbadbean.github.io/Booki/',
   },
   {
     id: 'project-2',
