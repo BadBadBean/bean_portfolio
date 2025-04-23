@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-import { send, sendHover } from "../assets";
+import { slideIn, textVariant, fadeIn } from "../utils/motion";
+import { send, sendHover, portrait } from "../assets";
+import Footer from "./Footer";
 
 const Contact = () => {
   const formRef = useRef();
@@ -15,7 +16,6 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  // Initialisation d'EmailJS au chargement du composant
   useEffect(() => {
     emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
   }, []);
@@ -29,7 +29,6 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Version modifiée sans passer la publicKey en paramètre
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -39,90 +38,111 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
+          alert("Merci ! Je vous répondrai dès que possible.");
+          setForm({ name: "", email: "", message: "" });
         },
         (error) => {
           setLoading(false);
-          console.log("EmailJS Error Details:", error);
-          alert(`Something went wrong: ${error.text}`);
+          console.error("EmailJS error:", error);
+          alert(`Une erreur est survenue : ${error.text}`);
         }
       );
   };
 
   return (
-    <div
-      className="-mt-[8rem] xl:flex-row flex-col-reverse 
-      flex gap-10 overflow-hidden"
-    >
+    <div className="h-screen flex flex-col justify-between relative px-4 sm:px-12">
+      {/* Titre encadré style 8-bit */}
+      <div className="w-full mt-10">
+        <div className="border-8bit-title">
+          <motion.div
+            variants={textVariant()}
+            className="section-title flex items-center gap-6 py-2"
+          >
+            {/* Image à gauche */}
+            <div>
+              <img
+                src={portrait}
+                className="max-w-[120px] h-auto object-contain"
+                alt="portrait"
+              />
+            </div>
+
+            {/* Texte centré */}
+            <div className="flex-1 flex justify-center">
+              <div className="text-left">
+                <motion.p
+                  variants={fadeIn("", "", 0.1, 1)}
+                  className="text-flashWhite font-jersey text-[22px]"
+                >
+                  Écrivez-moi
+                </motion.p>
+                <motion.h2
+                  variants={fadeIn("", "", 0.2, 1)}
+                  className="text-[32px] sm:text-[40px] text-white font-jersey"
+                >
+                  Contact.
+                </motion.h2>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Formulaire */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-jet p-8 rounded-2xl"
+        className="bg-jet px-6 py-5 rounded-xl max-w-[500px] w-full"
       >
-        <p className={styles.sectionSubText}>Écrivez-moi</p>
-        <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
-
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-10 flex flex-col gap-6 font-poppins"
+          className="flex flex-col gap-4 font-poppins"
         >
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Nom</span>
+            <span className="text-timberWolf font-medium mb-2">Nom</span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="Entrez votre nom"
-              className="bg-eerieBlack py-4 px-6
-              placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
-              border-none font-medium"
+              className="bg-eerieBlack py-3 px-4 placeholder:text-taupe text-timberWolf 
+              rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">
+            <span className="text-timberWolf font-medium mb-2">
               Adresse e-mail
             </span>
             <input
               type="email"
               name="email"
-              value={form.user_email}
+              value={form.email}
               onChange={handleChange}
               placeholder="Entrez votre adresse e-mail"
-              className="bg-eerieBlack py-4 px-6
-              placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
-              border-none font-medium"
+              className="bg-eerieBlack py-3 px-4 placeholder:text-taupe text-timberWolf 
+              rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-4">Message</span>
+            <span className="text-timberWolf font-medium mb-2">Message</span>
             <textarea
-              rows="7"
+              rows="5"
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="Votre message"
-              className="bg-eerieBlack py-4 px-6
-              placeholder:text-taupe
-              text-timberWolf rounded-lg outline-none
-              border-none font-medium resize-none"
+              className="bg-eerieBlack py-3 px-4 placeholder:text-taupe text-timberWolf 
+              rounded-lg outline-none border-none font-medium resize-none"
             />
           </label>
 
           <button
             type="submit"
             className="live-demo flex items-center justify-center gap-3
-            text-[16px] sm:text-[20px] text-timberWolf font-bold font-beckman 
-            py-4 px-6 rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack
-            transition duration-[0.2s] ease-in-out w-fit"
+            text-[16px] sm:text-[18px] text-timberWolf font-bold font-beckman 
+            py-3 px-5 rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack 
+            transition duration-[0.2s] ease-in-out w-fit self-center"
             onMouseOver={() => {
               document
                 .querySelector(".contact-btn")
@@ -136,8 +156,7 @@ const Contact = () => {
             <img
               src={send}
               alt="Envoyer"
-              className="contact-btn sm:w-[26px] sm:h-[26px] 
-              w-[23px] h-[23px] object-contain"
+              className="contact-btn sm:w-[24px] sm:h-[24px] w-[22px] h-[22px] object-contain"
             />
           </button>
         </form>

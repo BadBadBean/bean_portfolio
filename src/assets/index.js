@@ -4,6 +4,7 @@ import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
 import darkbg from './backgrounds/dark-bg.jpg';
 import techbg from './backgrounds/bg-tech.jpg';
+import mainbg from './backgrounds/bg-main.jpg';
 
 import logo from './logo/logo.png';
 import logotext from './logo/logo-text-black.png';
@@ -12,6 +13,8 @@ import linkedin from './logo/linkedin.png';
 
 import shaq from './personal/shaq.png';
 import bean from './personal/bean.gif';
+import portrait from './personal/dialogue-portrait.png';
+import reversePortrait from './personal/dialogue-portrait-reverse.png';
 
 import arrow from './icons/arrow.png';
 import backend from './icons/backend.png';
@@ -70,10 +73,13 @@ export {
   worldmap,
   darkbg,
   techbg,
+  mainbg,
   logo,
   logotext,
   shaq,
   bean,
+  portrait,
+  reversePortrait,
   mygithub,
   linkedin,
   arrow,
