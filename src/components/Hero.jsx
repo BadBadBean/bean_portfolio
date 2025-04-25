@@ -2,12 +2,13 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { bean, darkbg, arrow } from '../assets';
+import { bean, darkbg } from '../assets';
+import SectionArrow from './SectionArrow';
 
 const Hero = () => {
   return (
     <>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-full object-bottom">
+      <div id="hero" className="absolute pt-50px left-0 z-0 h-[100vh] w-full object-bottom">
         <img
           src={darkbg}
           alt="world map"
@@ -58,23 +59,6 @@ const Hero = () => {
           <div></div>
         </div>
 
-        <div
-  className="absolute xs:bottom-10 bottom-32 w-full 
-  flex justify-center items-center">
-  <a href="#about">
-    <motion.img
-      src={arrow}
-      alt="scroll arrow"
-      animate={{ y: [0, 5, 0] }}
-      transition={{
-        duration: 0.8,
-        repeat: Infinity,
-        repeatType: 'loop',
-      }}
-    />
-  </a>
-</div>
-
         {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
         <div>
           <img
@@ -85,6 +69,7 @@ const Hero = () => {
             alt="shaquille"
           />
         </div>
+        <SectionArrow targetId="about" direction="down" />
       </section>
     </>
   );

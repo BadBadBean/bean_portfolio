@@ -1,5 +1,7 @@
 import darkbg from './backgrounds/dark-bg.jpg';
 import mainbg from './backgrounds/bg-main.jpg';
+import footerbg from './backgrounds/footer.jpg';
+import fireworks from './backgrounds/fireworks.gif';
 
 import mygithub from './logo/github.png';
 import linkedin from './logo/linkedin.png';
@@ -9,7 +11,8 @@ import bean from './personal/bean.gif';
 import portrait from './personal/dialogue-portrait.png';
 import reversePortrait from './personal/dialogue-portrait-reverse.png';
 
-import arrow from './icons/arrow.png';
+import arrowUp from './icons/arrowUp.png';
+import arrowDown from './icons/arrowDown.png';
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
 import frontend from './icons/frontend.png';
@@ -60,13 +63,16 @@ import booki from './projects/booki.png';
 export {
   darkbg,
   mainbg,
+  footerbg,
+  fireworks,
   bean,
   portrait,
   reversePortrait,
   logo,
   mygithub,
   linkedin,
-  arrow,
+  arrowUp,
+  arrowDown,
   backend,
   ux,
   frontend,

@@ -2,15 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { textVariant } from '../utils/motion';
-import { SectionWrapper } from '../hoc';
 import { technologies } from '../constants';
 import { BoxCanva } from './canvas';
-import { reversePortrait, arrow } from '../assets';
+import { reversePortrait } from '../assets';
 import { fadeIn } from '../utils/motion';
+import SectionArrow from './SectionArrow';
 
 const Tech = () => {
   return (
-      <div className="relative flex flex-col justify-between h-full">
+      <section id="tech" className="relative flex flex-col justify-between h-full">
         {/* Contenu principal */}
         <div>
           {/* Conteneur pour assurer que la bordure s'affiche correctement */}
@@ -24,7 +24,7 @@ const Tech = () => {
                 <div>
                   <img
                     src={reversePortrait}
-                    className="max-w-[120px] h-auto object-contain"
+                    className="max-w-[100px] h-auto object-contain"
                     alt="portrait"
                   />
                 </div>
@@ -54,26 +54,12 @@ const Tech = () => {
           </div>
         ))}
       </div>
-
-      {/* Flèche animée en bas de la section */}
-      <div className="absolute bottom-2 mb-4 z-10 w-full flex justify-center py-2">
-        <a href="#projects">
-          <motion.img
-            src={arrow}
-            alt="scroll arrow"
-            animate={{ y: [0, 5, 0] }}
-            transition={{
-              duration: 0.8,
-              repeat: Infinity,
-              repeatType: 'loop',
-            }}
-          />
-        </a>
-      </div>
     </div>
-  </div>
+    <SectionArrow targetId="projects" direction="down" />
+    <SectionArrow targetId="about" direction="up" />
+  </section>
   );
 };
 
-export default SectionWrapper(Tech, 'tech', true);
+export default Tech
 

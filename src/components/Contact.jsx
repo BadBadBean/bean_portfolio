@@ -2,10 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
 import { slideIn, textVariant, fadeIn } from "../utils/motion";
 import { send, sendHover, portrait } from "../assets";
-import Footer from "./Footer";
+import SectionArrow from "./SectionArrow";
 
 const Contact = () => {
   const formRef = useRef();
@@ -50,9 +49,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col justify-between relative px-4 sm:px-12">
+    <section id="contact" className="relative sm:px-12">
       {/* Titre encadré style 8-bit */}
-      <div className="w-full mt-10">
+      <div className="w-full">
         <div className="border-8bit-title">
           <motion.div
             variants={textVariant()}
@@ -62,7 +61,7 @@ const Contact = () => {
             <div>
               <img
                 src={portrait}
-                className="max-w-[120px] h-auto object-contain"
+                className="max-w-[100px] h-auto object-contain"
                 alt="portrait"
               />
             </div>
@@ -161,8 +160,9 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-    </div>
+      <SectionArrow targetId="hero" direction="up" />
+      </section>
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default Contact;

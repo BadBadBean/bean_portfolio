@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
-import { mygithub, portrait, arrow } from "../assets";
+import { mygithub, portrait } from "../assets";
 import { projects } from "../constants";
 import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
+import SectionArrow from "./SectionArrow";
 
 const ProjectCard = ({
   id,
@@ -123,7 +123,7 @@ const Projects = () => {
   const [active, setActive] = useState("project-2");
 
   return (
-    <div className="relative flex flex-col justify-between h-full">
+    <section id="projects" className="relative flex flex-col justify-between h-full">
       <div className="flex-grow">
         <div className="w-full" style={{ display: 'block' }}>
           <div className="border-8bit-title" style={{ display: 'block', position: 'relative', boxSizing: 'border-box' }}>
@@ -134,7 +134,7 @@ const Projects = () => {
               <div>
                 <img
                   src={portrait}
-                  className="max-w-[120px] h-auto object-contain"
+                  className="max-w-[100px] h-auto object-contain"
                   alt="portrait"
                 />
               </div>
@@ -174,24 +174,10 @@ const Projects = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Flèche animée */}
-      <div className="absolute bottom-2 mb-4 z-10 w-full flex justify-center py-2">
-        <a href="#experiences">
-          <motion.img
-            src={arrow}
-            alt="scroll arrow"
-            animate={{ y: [0, 5, 0] }}
-            transition={{
-              duration: 0.8,
-              repeat: Infinity,
-              repeatType: 'loop',
-            }}
-          />
-        </a>
-      </div>
-    </div>
+      <SectionArrow targetId="experience" direction="down" />
+      <SectionArrow targetId="tech" direction="up" />
+    </section>
   );
 };
 
-export default SectionWrapper(Projects, "projects");
+export default Projects;

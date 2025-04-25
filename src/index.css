@@ -5,31 +5,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Arenq';
-  src: url('./fonts/arenq.otf');
-}
-
-@font-face {
-  font-family: 'Mova';
-  src: url('./fonts/mova.otf');
-}
-
-@font-face {
-  font-family: 'Beckman';
-  src: url('./fonts/beckman.otf');
-}
-
-@font-face {
-  font-family: 'Overcame Bold';
-  src: url('./fonts/overcame-bold.woff');
-}
-
-@font-face {
-  font-family: 'Overcame Outline';
-  src: url('./fonts/overcame-outline.woff');
-}
-
-@font-face {
   font-family: 'Jersey 10';
   src: url('./fonts/Jersey10-Regular.ttf');
 }
@@ -42,44 +17,10 @@
   color-scheme: dark;
 }
 
-/* .nav-links::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #292929;
-  margin: auto;
-  transition: 0.5s;
-}
-
-.nav-links:hover::after {
-  width: 70%;
-} */
-
-#about {
-  margin-left: -24px;
-  font-size: 100px;
-}
-
-#projects {
-  margin-left: -2px;
-  font-size: 100px;
-}
-
-#contact {
-  margin-left: -20px;
-  font-size: 95px;
-  letter-spacing: -2px;
-}
-
 .hero-heading {
   font-family: '', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-}
-
-.hash-span {
-  display: block;
 }
 
 .vertical-timeline.vertical-timeline-custom-line::before {
@@ -89,6 +30,10 @@
     rgba(66, 66, 66, 0.8) 40%,
     rgba(234, 234, 236, 0.45) 100%
   );
+}
+
+.vertical-timeline-element {
+  margin-block: 0;
 }
 
 .vertical-timeline-element-icon {
@@ -164,15 +109,13 @@
     0 -8px rgba(0, 0, 255, 0.5),
     0 8px rgba(0, 0, 255, 0.5),
     0 0 0 4px rgba(0, 0, 255, 0.5);
-  max-width: 1500px;
-  width: fit-content;
-  padding: 50px;
   color: white;
 }
 
 section {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     min-height: 100vh;
+    padding: 80px 50px 0;
 }
 
 
@@ -189,8 +132,34 @@ nav a {
 nav a:hover{
   color:rgba(0,0,0,0);
 }
-@keyframes rainbow { 
+@keyframes rainbow {
   0%{background-position:left}
   50%{background-position:right}
   100%{background-position:left}
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  position: absolute;
+  bottom: 14px;
+  width: 100%;
+  text-align: center;
+}
+
+footer img {
+  width: 100%;
+}
+
+.footer-gif {
+  max-width: 700px;
+  position: absolute;
+  z-index: -1;
+  bottom: 150px;
+  right: 200px;
+
 }

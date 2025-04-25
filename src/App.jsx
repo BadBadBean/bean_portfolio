@@ -23,19 +23,18 @@ const App = () => {
         {/* Contenu principal au-dessus */}
         <div className="relative z-10">
           <Navbar />
-          <Hero />
-          <section>
+
+          <main>
+            <Hero />
             <About />
-          </section>
-          <Tech />
-          <Projects />
-          <div>
+            <Tech />
+            <Projects />
             <Experience />
-          </div>
+          </main>
+
           <Contact />
           <Footer />
         </div>
-        
       </div>
     </BrowserRouter>
   );
