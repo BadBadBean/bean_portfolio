@@ -1,17 +1,10 @@
-import bwmap from './backgrounds/bw-map.jpeg';
-import nairobi from './backgrounds/nairobi.png';
-import whiteabstract from './backgrounds/white-abstract.png';
-import worldmap from './backgrounds/world-map.png';
 import darkbg from './backgrounds/dark-bg.jpg';
-import techbg from './backgrounds/bg-tech.jpg';
 import mainbg from './backgrounds/bg-main.jpg';
 
-import logo from './logo/logo.png';
-import logotext from './logo/logo-text-black.png';
 import mygithub from './logo/github.png';
 import linkedin from './logo/linkedin.png';
+import logo from './logo/logo.png';
 
-import shaq from './personal/shaq.png';
 import bean from './personal/bean.gif';
 import portrait from './personal/dialogue-portrait.png';
 import reversePortrait from './personal/dialogue-portrait-reverse.png';
@@ -53,10 +46,8 @@ import postgresql from './tech/postgresql.png';
 import rubyrails from './tech/rubyrails.png';
 import wordpress from './tech/wordpress.png';
 
-import coverhunt from './company/coverhunt.png';
-import dcc from './company/dcc.png';
-import kelhel from './company/kelhel.png';
-import microverse from './company/microverse.png';
+import brain from './company/brain.png';
+import openclassrooms from './company/openclassrooms.png';
 
 import komikult from './projects/komikult.png';
 import leaderboard from './projects/leaderboard.png';
@@ -67,19 +58,12 @@ import space from './projects/space-hub.png';
 import booki from './projects/booki.png';
 
 export {
-  bwmap,
-  nairobi,
-  whiteabstract,
-  worldmap,
   darkbg,
-  techbg,
   mainbg,
-  logo,
-  logotext,
-  shaq,
   bean,
   portrait,
   reversePortrait,
+  logo,
   mygithub,
   linkedin,
   arrow,
@@ -124,8 +108,6 @@ export {
   nyeusi,
   space,
   booki,
-  coverhunt,
-  dcc,
-  kelhel,
-  microverse,
+  brain,
+  openclassrooms,
 };
