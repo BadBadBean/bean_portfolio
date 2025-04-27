@@ -31,23 +31,27 @@ const Tech = () => {
   
                 {/* Bloc centré */}
                 <div className="flex-1 flex justify-center">
-                  <div className="text-left">
-                    <motion.p
-                      variants={fadeIn('', '', 0.1, 1)}
-                      className="mt-4 text-flashWhite font-jersey text-[22px] max-w-3xl leading-[30px]"
-                    >
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-                      sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
-                      quaerat alias accusamus voluptas autem!
-                    </motion.p>
-                  </div>
-                </div>
+              <div className="text-left">
+                <motion.h2
+                  variants={fadeIn("", "", 0.2, 1)}
+                  className="text-[26px] sm:text-[32px] text-white font-jersey"
+                >
+                  Technologies.
+                </motion.h2>
+                <motion.p
+                  variants={fadeIn("", "", 0.1, 1)}
+                  className="text-flashWhite font-jersey text-[18px] leading-[26px]"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at consectetur nibh. Praesent dictum dui eu porta congue. Vestibulum convallis sagittis purus sit amet interdum. 
+                </motion.p>
+              </div>
+            </div>
               </motion.div>
             </div>
           </div>
 
       {/* Technologies */}
-      <div className="mt-14 flex flex-wrap justify-center gap-10">
+      <div className="mt-14 flex flex-wrap justify-center gap-[8vh] w-[80%] m-auto">
         {technologies.map((technology) => (
           <div className="w-28 h-28" key={technology.name}>
             <BoxCanva icon={technology.icon} />

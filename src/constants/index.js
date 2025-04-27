@@ -1,5 +1,10 @@
 import {
   frontend,
+  design,
+  magnifyingGlass,
+  gear,
+  bulb,
+  novice,
   backend,
   ux,
   prototyping,
@@ -43,11 +48,11 @@ export const navLinks = [
     title: 'Projects',
   },
   {
-    id: 'experiences',
+    id: 'experience',
     title: 'Experiences',
   },
   {
-    id: 'footer',
+    id: 'contact',
     title: 'Contact',
   },
 ];
@@ -55,19 +60,31 @@ export const navLinks = [
 const services = [
   {
     title: 'Frontend Developer',
-    icon: frontend,
+    icon: design,
+    level: "3",
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    rank: "Apprentice",
   },
   {
     title: 'Backend Developer',
-    icon: backend,
+    icon: gear,
+    level: "2",
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    rank: "Youngling",
   },
   {
     title: 'UI/UX Design',
-    icon: ux,
+    icon: bulb,
+    level: "1",
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    rank: "Novice",
   },
   {
-    title: 'Software Prototyping',
-    icon: prototyping,
+    title: 'SEO',
+    icon: magnifyingGlass,
+    level: "1",
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    rank: "Novice",
   },
 ];
 

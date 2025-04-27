@@ -69,18 +69,18 @@ const Contact = () => {
             {/* Texte centré */}
             <div className="flex-1 flex justify-center">
               <div className="text-left">
-                <motion.p
-                  variants={fadeIn("", "", 0.1, 1)}
-                  className="text-flashWhite font-jersey text-[22px]"
-                >
-                  Écrivez-moi
-                </motion.p>
                 <motion.h2
                   variants={fadeIn("", "", 0.2, 1)}
                   className="text-[32px] sm:text-[40px] text-white font-jersey"
                 >
                   Contact.
                 </motion.h2>
+                <motion.p
+                  variants={fadeIn("", "", 0.1, 1)}
+                  className="text-flashWhite font-jersey text-[22px]"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at consectetur nibh. Praesent dictum dui eu porta congue. Vestibulum convallis sagittis purus sit amet interdum. 
+                </motion.p>
               </div>
             </div>
           </motion.div>

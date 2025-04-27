@@ -27,6 +27,12 @@ import menu from './icons/menu.png';
 import resume from './icons/resume.png';
 import send from './icons/send.png';
 import sendHover from './icons/sendHover.png';
+import novice from './icons/novice.png';
+
+import design from './services/design.png';
+import magnifyingGlass from './services/magnifying-glass.png';
+import gear from './services/gear.png';
+import bulb from './services/bulb.png';
 
 import bootstrap from './tech/bootstrap.png';
 import css from './tech/css.png';
@@ -75,6 +81,10 @@ export {
   arrowDown,
   backend,
   ux,
+  design,
+  magnifyingGlass,
+  gear,
+  bulb,
   frontend,
   prototyping,
   github,
@@ -87,6 +97,7 @@ export {
   resume,
   send,
   sendHover,
+  novice,
   bootstrap,
   css,
   docker,
