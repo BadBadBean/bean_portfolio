@@ -24,20 +24,11 @@
 }
 
 .vertical-timeline.vertical-timeline-custom-line::before {
-  background: rgb(66, 66, 66);
-  background: linear-gradient(
-    180deg,
-    rgba(66, 66, 66, 0.8) 40%,
-    rgba(234, 234, 236, 0.45) 100%
-  );
-}
-
-.vertical-timeline-element {
-  margin-block: 0;
+  background: #305fc785;
 }
 
 .vertical-timeline-element-icon {
-  box-shadow: 0 0 0 4px #afafafd2, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+  box-shadow: 0 0 0 4px #305fc7, inset 0 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -112,9 +103,13 @@
 }
 
 section {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     min-height: 100vh;
     padding: 80px 50px 0;
+}
+
+#experience {
+  min-height: 120vh;
 }
 
 
@@ -162,3 +157,105 @@ footer img {
   right: 200px;
 
 }
+
+.input-group {
+  position: relative;
+  margin-top: 50px;
+}
+
+/* ------------------- INPUT / TEXTAREA de base ------------------- */
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 15px 0 15px;
+  background: #1c3b7d85;
+  border-radius: 5px;
+  outline: 4px solid white;
+  transition: outline-color 0.3s ease;
+  box-shadow:
+    4px 0 white, -4px 0 white,
+    0 -4px white, 0 4px white,
+    8px 0 rgba(0, 0, 255, 0.5), -8px 0 rgba(0, 0, 255, 0.5),
+    0 -8px rgba(0, 0, 255, 0.5), 0 8px rgba(0, 0, 255, 0.5),
+    0 0 0 4px rgba(0, 0, 255, 0.5);
+}
+
+/* ------------------- OUTLINE dynamique ------------------- */
+.input-group input:focus:invalid,
+.input-group textarea:focus:invalid {
+  outline-color: #0ef;
+}
+
+.input-group input:invalid:not(:placeholder-shown),
+.input-group textarea:invalid:not(:placeholder-shown) {
+  outline-color: rgb(231, 96, 96);
+}
+
+.input-group input:valid:not(:placeholder-shown),
+.input-group textarea:valid:not(:placeholder-shown) {
+  outline-color: rgb(127, 224, 127);
+}
+
+/* ------------------- LABEL positionné au-dessus ------------------- */
+.input-group label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 20px;
+  pointer-events: none;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  padding: 0 5px;
+}
+
+/* ------------------- LABEL animé au focus ou champ rempli ------------------- */
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:focus + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%);
+  background: #1c224f;
+  font-size: 16px;
+  padding: 0 0.5em;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+/* ------------------- LABEL BLEU au focus (par défaut) ------------------- */
+.input-group input:focus + label,
+.input-group textarea:focus + label {
+  border-color: #0ef;
+  box-shadow:
+    2px 0 #0ef, -2px 0 #0ef,
+    0 -2px #0ef, 0 2px #0ef,
+    4px 0 rgba(0, 0, 255, 0.5), -4px 0 rgba(0, 0, 255, 0.5),
+    0 -4px rgba(0, 0, 255, 0.5), 0 4px rgba(0, 0, 255, 0.5);
+}
+
+/* ------------------- LABEL ROUGE si champ invalide rempli ------------------- */
+.input-group input:invalid:not(:placeholder-shown) + label,
+.input-group textarea:invalid:not(:placeholder-shown) + label {
+  border-color: rgb(231, 96, 96);
+  box-shadow:
+    2px 0 rgb(231, 96, 96), -2px 0 rgb(231, 96, 96),
+    0 -2px rgb(231, 96, 96), 0 2px rgb(231, 96, 96),
+    4px 0 rgba(255, 0, 0, 0.5), -4px 0 rgba(255, 0, 0, 0.5),
+    0 -4px rgba(255, 0, 0, 0.5), 0 4px rgba(255, 0, 0, 0.5);
+}
+
+/* ------------------- LABEL VERT si champ valide rempli ------------------- */
+.input-group input:valid:not(:placeholder-shown) + label,
+.input-group textarea:valid:not(:placeholder-shown) + label {
+  border-color: rgb(127, 224, 127);
+  box-shadow:
+    2px 0 rgb(127, 224, 127), -2px 0 rgb(127, 224, 127),
+    0 -2px rgb(127, 224, 127), 0 2px rgb(127, 224, 127),
+    4px 0 rgba(0, 128, 0, 0.5), -4px 0 rgba(0, 128, 0, 0.5),
+    0 -4px rgba(0, 128, 0, 0.5), 0 4px rgba(0, 128, 0, 0.5);
+}
+

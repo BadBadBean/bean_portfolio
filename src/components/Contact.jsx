@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { slideIn, textVariant, fadeIn } from "../utils/motion";
-import { send, sendHover, portrait } from "../assets";
+import { arrowRight, portrait } from "../assets";
 import SectionArrow from "./SectionArrow";
 
 const Contact = () => {
@@ -79,7 +79,9 @@ const Contact = () => {
                   variants={fadeIn("", "", 0.1, 1)}
                   className="text-flashWhite font-jersey text-[22px]"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at consectetur nibh. Praesent dictum dui eu porta congue. Vestibulum convallis sagittis purus sit amet interdum. 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at
+                  consectetur nibh. Praesent dictum dui eu porta congue.
+                  Vestibulum convallis sagittis purus sit amet interdum.
                 </motion.p>
               </div>
             </div>
@@ -90,78 +92,93 @@ const Contact = () => {
       {/* Formulaire */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="bg-jet px-6 py-5 rounded-xl max-w-[500px] w-full"
+        className="px-6 py-5 max-w-[50%] w-full"
       >
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-4 font-poppins"
-        >
-          <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-2">Nom</span>
+        <form ref={formRef} onSubmit={handleSubmit} className="font-jersey">
+          <div className="input-group">
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Entrez votre nom"
-              className="bg-eerieBlack py-3 px-4 placeholder:text-taupe text-timberWolf 
-              rounded-lg outline-none border-none font-medium"
+              required
+              placeholder=" "
             />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-2">
-              Adresse e-mail
-            </span>
+            <label>Your Name</label>
+          </div>
+          <div className="input-group">
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Entrez votre adresse e-mail"
-              className="bg-eerieBlack py-3 px-4 placeholder:text-taupe text-timberWolf 
-              rounded-lg outline-none border-none font-medium"
+              required
+              placeholder=" "
             />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-timberWolf font-medium mb-2">Message</span>
+            <label>Your Email</label>
+          </div>
+          <div className="input-group">
             <textarea
               rows="5"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Votre message"
-              className="bg-eerieBlack py-3 px-4 placeholder:text-taupe text-timberWolf 
-              rounded-lg outline-none border-none font-medium resize-none"
+              required
+              placeholder=" "
             />
-          </label>
+            <label>Your message</label>
+          </div>
 
-          <button
-            type="submit"
-            className="live-demo flex items-center justify-center gap-3
-            text-[16px] sm:text-[18px] text-timberWolf font-bold font-beckman 
-            py-3 px-5 rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack 
-            transition duration-[0.2s] ease-in-out w-fit self-center"
-            onMouseOver={() => {
-              document
-                .querySelector(".contact-btn")
-                .setAttribute("src", sendHover);
-            }}
-            onMouseOut={() => {
-              document.querySelector(".contact-btn").setAttribute("src", send);
-            }}
-          >
-            {loading ? "Envoi en cours" : "Envoyer"}
-            <img
-              src={send}
-              alt="Envoyer"
-              className="contact-btn sm:w-[24px] sm:h-[24px] w-[22px] h-[22px] object-contain"
-            />
-          </button>
+          <div className="relative inline-block w-fit sm:mt-[30px] transition-transform duration-150 ease-in-out active:translate-y-1 active:scale-95">
+            <button
+              type="submit"
+              className="w-full text-center text-white py-[0.5em] px-[1em] font-jersey text-lg
+                bg-[#76778b] hover:bg-[#8633cd] 
+                active:shadow-[inset_3px_3px_0px_0px_#3a1260]
+                hover:shadow-[inset_-4px_-4px_0px_0px_#3a1260]
+                shadow-[inset_-3px_-3px_0px_0px_#49484e]
+                transition duration-200 ease-in-out transform
+                flex items-center justify-around gap-4 h-auto z-20 rounded-md"
+              onMouseOver={() => {
+                document
+                  .querySelector(".contact-btn")
+                  .setAttribute("src", sendHover);
+              }}
+              onMouseOut={() => {
+                document
+                  .querySelector(".contact-btn")
+                  .setAttribute("src", send);
+              }}
+            >
+              {loading ? "Envoi en cours" : "Envoyer"}
+              <img
+                src={arrowRight}
+                alt="Envoyer"
+                className="contact-btn sm:w-[24px] sm:h-[24px] w-[22px] h-[22px] object-contain"
+              />
+            </button>
+            {/* Bordures rétro du bouton */}
+            {["top", "bottom"].map((pos) => (
+              <div
+                key={pos}
+                className={`absolute ${
+                  pos === "top" ? "top-[-4px]" : "bottom-[-4px]"
+                } left-0 right-0 h-[4px] bg-black pointer-events-none`}
+              />
+            ))}
+            {["left", "right"].map((pos) => (
+              <div
+                key={pos}
+                className={`absolute ${
+                  pos === "left" ? "left-[-4px]" : "right-[-4px]"
+                } top-0 bottom-0 w-[4px] bg-black pointer-events-none`}
+              />
+            ))}
+          </div>
         </form>
       </motion.div>
       <SectionArrow targetId="hero" direction="up" />
-      </section>
+    </section>
   );
 };
 

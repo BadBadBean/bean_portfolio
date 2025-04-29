@@ -1,10 +1,10 @@
-import { footerbg, fireworks } from "../assets";
+import { footerbg } from "../assets";
 
 export default function Footer() {
     return (
       <footer>
-        <img className="footer-gif" src={fireworks}
-        />
+        {/* <img className="footer-gif" src={fireworks}
+        /> */}
         <img src={footerbg}
         />
         <p>

@@ -13,40 +13,37 @@ import SectionArrow from "../components/SectionArrow";
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
-      background: "#eaeaec",
-      color: "#292929",
-      padding: "12px 16px",
-      boxShadow: "rgba(0, 0, 0, 0.05) 0px 2px 4px",
+      background: '#1c3b7d85',
+      boxShadow:
+      '4px 0 rgba(255, 255, 255, 0.6), -4px 0 rgba(255, 255, 255, 0.6), 0 -4px rgba(255, 255, 255, 0.6), 0 4px rgba(255, 255, 255, 0.6), 8px 0 rgba(0, 0, 255, 0.274), -8px 0 rgba(0, 0, 255, 0.5), 0 -8px rgba(0, 0, 255, 0.5), 0 8px rgba(0, 0, 255, 0.5), 0 0 0 4px rgba(0, 0, 255, 0.5)',
     }}
     contentArrowStyle={{
-      borderRight: "6px solid #232631",
+      borderRight: '7px solid  ##1c3b7d85',
     }}
     date={
-      <h3 className="text-dim text-[14px] font-semibold font-beckman">
-        {experience.date}
-      </h3>
+      <div>
+        <h3 className="text-flashWhite text-[24px] font-jersey">
+          {experience.date}
+        </h3>
+      </div>
     }
-    iconStyle={{
-      background: experience.iconBg,
-      width: "40px",
-      height: "40px",
-      top: "12px",
-    }}
+    iconStyle={{ background: experience.iconBg }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
         <img
           src={experience.icon}
           alt={experience.company_name}
-          className="w-[70%] h-[70%] object-contain"
+          className="w-[=60%] h-[60%] object-contain"
         />
       </div>
-    }
-  >
+    }>
     <div>
-      <h3 className="text-jetLight text-[18px] font-bold font-beckman tracking-[1px]">
+      <h3 className="text-flashWhite text-[24px] font-bold font-jersey tracking-[2px]">
         {experience.title}
       </h3>
-      <p className="text-taupe text-[16px] font-medium font-overcameBold tracking-[0.5px]">
+      <p
+        className="text-flashWhite text-[22px] font-semibold font-jersey tracking-[1px]"
+        style={{ margin: 0 }}>
         {experience.company_name}
       </p>
     </div>
@@ -91,66 +88,16 @@ const Experience = () => {
         </div>
       </div>
 
-      {/* Timeline */}
-      
+      {/* Timeline */} 
+      <div className="mt-16 flex flex-col">
         <VerticalTimeline className="vertical-timeline-custom-line">
           {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+            <ExperienceCard key={index} experience={experience}/>
           ))}
-
-          {/* Résumé button element */}
-          <VerticalTimelineElement
-            contentStyle={{
-              background: "#eaeaec",
-              color: "#292929",
-              padding: "12px 16px",
-              boxShadow: "rgba(0, 0, 0, 0.05) 0px 2px 4px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            contentArrowStyle={{
-              borderRight: "6px solid  #232631",
-            }}
-            iconStyle={{ background: "#333333", width: "40px", height: "40px", top: "12px" }}
-            icon={
-              <div className="flex justify-center items-center w-full h-full">
-                <img
-                  src={resume}
-                  alt="resume"
-                  className="w-[60%] h-[60%] object-contain"
-                />
-              </div>
-            }
-          >
-            <button
-              className="live-demo flex justify-between text-[14px] text-timberWolf font-bold font-beckman items-center py-3 px-3 w-[120px] h-[42px] rounded-[10px] bg-jetLight hover:bg-battleGray hover:text-eerieBlack transition duration-200"
-              onClick={() =>
-                window.open("resume link", "_blank") // remplace par ton lien
-              }
-              onMouseOver={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", downloadHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector(".download-btn")
-                  .setAttribute("src", download);
-              }}
-            >
-              MY RESUME
-              <img
-                src={download}
-                alt="download"
-                className="download-btn w-[20px] h-[20px] object-contain"
-              />
-            </button>
-          </VerticalTimelineElement>
         </VerticalTimeline>
-        <SectionArrow targetId="contact" direction="down" />
-        <SectionArrow targetId="projects" direction="up" />
-      
+      </div>
+      <SectionArrow targetId="contact" direction="down" />
+      <SectionArrow targetId="projects" direction="up" />
     </section>
   );
 };

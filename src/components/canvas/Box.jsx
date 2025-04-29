@@ -1,5 +1,5 @@
 import React, { Suspense, useRef, useEffect, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import {
   Decal,
   Float,
@@ -10,6 +10,7 @@ import {
 } from '@react-three/drei';
 import * as THREE from 'three';
 import Loader from '../Loader';
+
 
 const Box = ({ imgUrl }) => {
   // Attendre que la texture soit complètement chargée avant de l'appliquer
@@ -24,7 +25,7 @@ const Box = ({ imgUrl }) => {
   const faceOffset = cubeSize / 2; // Position exacte du centre de chaque face
   
   // Ajuster l'échelle des decals pour s'adapter à la taille du cube
-  const decalScale = [2.8, 2.8, 2.8]; // Légèrement plus petit que la face pour éviter les débordements
+  const decalScale = [3.4, 3.4, 3.4]; // Légèrement plus petit que la face pour éviter les débordements
   
   const glowColor = new THREE.Color('#0099ff');
 
@@ -53,23 +54,24 @@ const Box = ({ imgUrl }) => {
 
   return (
     <>
-      <ambientLight intensity={0.4} />
-      <directionalLight position={[2, 2, 2]} intensity={1.2} color={'#437ec4'} />
+      <ambientLight intensity={0.2} />
+      <directionalLight position={[5, 5, 5]} intensity={1.5} color={'#437ec4'} />
       <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
         <RoundedBox
           ref={meshRef}
           args={[cubeSize, cubeSize, cubeSize]}
           radius={0.25}
-          smoothness={4}
+          smoothness={1}
           castShadow
           receiveShadow
         >
           <meshStandardMaterial
             color="#5863d7"
             emissive={glowColor}
-            emissiveIntensity={0.4}
-            metalness={0.2}
-            roughness={0.5}
+            emissiveIntensity={0.2}
+            metalness={0
+            }
+            roughness={0.9}
             polygonOffset
             polygonOffsetFactor={5} // Augmenté pour éviter le z-fighting
           />

@@ -26,21 +26,21 @@ const ProjectCard = ({
       h-[420px] cursor-pointer card-shadow`}
       onClick={() => handleClick(id)}
     >
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 z-10 bg-jetLight h-full w-full opacity-[0.5]"></div>
+      <div className="absolute inset-0 border-8bit">
+        <div className="absolute top-0 left-0 z-10 bg-[#10132C] h-full w-full opacity-[0.6]"></div>
         <img src={image} alt={name} className="absolute w-full h-full object-cover" />
 
         {/* Bordures animées */}
         {["top", "bottom"].map((pos) => (
           <div
             key={pos}
-            className={`absolute ${pos === "top" ? "top-[-4px]" : "bottom-[-4px]"} left-0 right-0 h-[4px] bg-black z-30 pointer-events-none transition-all duration-200`}
+            className={`absolute ${pos === "top" ? "top-[-4px]" : "bottom-[-4px]"} left-0 right-0 h-[4px] z-30 pointer-events-none transition-all duration-200`}
           />
         ))}
         {["left", "right"].map((pos) => (
           <div
             key={pos}
-            className={`absolute ${pos === "left" ? "left-[-4px]" : "right-[-4px]"} top-0 bottom-0 w-[4px] bg-black z-30 pointer-events-none transition-all duration-200`}
+            className={`absolute ${pos === "left" ? "left-[-4px]" : "right-[-4px]"} top-0 bottom-0 w-[4px] z-30 pointer-events-none transition-all duration-200`}
           />
         ))}
 
@@ -56,14 +56,18 @@ const ProjectCard = ({
           </h3>
         </div>
       ) : (
-        <div className="absolute bottom-0 p-8 justify-start w-full flex-col bg-[rgba(122,122,122,0.5)] z-20">
-          <div className="absolute inset-0 flex justify-end m-3">
+        <div className="absolute bottom-0 justify-start border-8bit w-full flex-col bg-[#072d7d] p-6 z-20 -mx-12">
+          <div className="flex justify-between border-8bit -mx-10 -mt-6 mb-6 bg-[#052D7D] px-[1em] py-[0.5em] rounded-md">
+          <h2 className="font-bold sm:text-[32px] text-[24px] text-timberWolf uppercase font-jersey sm:mt-0 -mt-[1rem]">
+            {name}
+          </h2>
+          <div>
             <div
               onClick={(e) => {
                 e.stopPropagation();
                 window.open(repo, "_blank");
               }}
-              className="bg-night sm:w-11 sm:h-11 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer sm:opacity-[0.9] opacity-[0.8]"
+              className="bg-[#1c224f] sm:w-11 sm:h-11 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer sm:opacity-[0.9] opacity-[0.8]"
               aria-label="Open GitHub repository"
             >
               <img
@@ -73,10 +77,8 @@ const ProjectCard = ({
               />
             </div>
           </div>
+          </div>
 
-          <h2 className="font-bold sm:text-[32px] text-[24px] text-timberWolf uppercase font-jersey sm:mt-0 -mt-[1rem]">
-            {name}
-          </h2>
           <p className="text-silver sm:text-[14px] text-[12px] max-w-3xl sm:leading-[24px] leading-[18px] font-poppins tracking-[1px]">
             {description}
           </p>
@@ -120,7 +122,7 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-  const [active, setActive] = useState("project-2");
+  const [active, setActive] = useState("project-1");
 
   return (
     <section id="projects" className="relative flex flex-col justify-between h-full">
@@ -165,7 +167,7 @@ const Projects = () => {
           viewport={{ once: false, amount: 0.25 }}
           className={`${styles.innerWidth} mx-auto flex flex-col`}
         >
-          <div className="mt-[50px] flex lg:flex-row flex-col gap-5">
+          <div className="mt-[50px] flex lg:flex-row flex-col gap-16">
             {projects.map((project, index) => (
               <ProjectCard
                 key={project.id}

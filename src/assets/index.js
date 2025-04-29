@@ -13,6 +13,7 @@ import reversePortrait from './personal/dialogue-portrait-reverse.png';
 
 import arrowUp from './icons/arrowUp.png';
 import arrowDown from './icons/arrowDown.png';
+import arrowRight from './icons/arrowRight.png';
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
 import frontend from './icons/frontend.png';
@@ -57,6 +58,9 @@ import wordpress from './tech/wordpress.png';
 
 import brain from './company/brain.png';
 import openclassrooms from './company/openclassrooms.png';
+import diploma from './company/diploma.png';
+import book from './company/book.png';
+import computer from './company/computer.png';
 
 import komikult from './projects/komikult.png';
 import leaderboard from './projects/leaderboard.png';
@@ -79,6 +83,7 @@ export {
   linkedin,
   arrowUp,
   arrowDown,
+  arrowRight,
   backend,
   ux,
   design,
@@ -127,4 +132,7 @@ export {
   booki,
   brain,
   openclassrooms,
+  diploma,
+  book,
+  computer,
 };

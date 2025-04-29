@@ -32,6 +32,9 @@ import {
   booki,
   brain,
   openclassrooms,
+  diploma,
+  book,
+  computer,
 } from '../assets';
 
 export const navLinks = [
@@ -160,29 +163,29 @@ const experiences = [
   {
     title: 'Self-study',
     company_name: 'HTML CSS JS',
-    icon: brain,
-    iconBg: '#333333',
+    icon: book,
+    iconBg: '#0F1226',
     date: '2014',
   },
   {
     title: 'eCommerce Website Creation',
     company_name: 'Prestashop',
-    icon: prestashop,
-    iconBg: '#333333',
+    icon: computer,
+    iconBg: '#0F1226',
     date: '2015',
   },
   {
     title: 'Web Developer Certification',
     company_name: 'Openclassrooms',
-    icon: openclassrooms,
-    iconBg: '#333333',
+    icon: diploma,
+    iconBg: '#0F1226',
     date: '2018',
   },
   {
     title: 'Front-end Developer Certification',
     company_name: 'Openclassrooms',
-    icon: openclassrooms,
-    iconBg: '#333333',
+    icon: diploma,
+    iconBg: '#0F1226',
     date: '2024-2025',
   },
 ];
@@ -206,7 +209,7 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: komikult,
+    image: booki,
     repo: 'https://github.com/BadBadBean/Booki',
     demo: 'https://badbadbean.github.io/Booki/',
   },
