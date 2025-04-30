@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { arrowUp, arrowDown } from "../assets"; // adapte le chemin si nécessaire
+import { arrowUp, arrowDown } from "../assets";
 
 const SectionArrow = ({ targetId, direction = "down", className = "" }) => {
   const [isVisible, setIsVisible] = useState(true);

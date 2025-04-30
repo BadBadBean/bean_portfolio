@@ -50,14 +50,14 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative sm:px-12">
-      {/* Titre encadré style 8-bit */}
+
+      {/* Titre encadré */}
       <div className="w-full">
         <div className="border-8bit-title">
           <motion.div
             variants={textVariant()}
             className="section-title flex items-center gap-6 py-2"
           >
-            {/* Image à gauche */}
             <div>
               <img
                 src={portrait}
@@ -65,8 +65,6 @@ const Contact = () => {
                 alt="portrait"
               />
             </div>
-
-            {/* Texte centré */}
             <div className="flex-1 flex justify-center">
               <div className="text-left">
                 <motion.h2
@@ -92,7 +90,7 @@ const Contact = () => {
       {/* Formulaire */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="px-6 py-5 max-w-[50%] w-full"
+        className="px-6 py-5 lg:max-w-[50%] w-full"
       >
         <form ref={formRef} onSubmit={handleSubmit} className="font-jersey">
           <div className="input-group">
@@ -129,16 +127,17 @@ const Contact = () => {
             <label>Your message</label>
           </div>
 
-          <div className="relative inline-block w-fit sm:mt-[30px] transition-transform duration-150 ease-in-out active:translate-y-1 active:scale-95">
+          <div className="relative inline-block sm:w-[138px] w-[100px] sm:mt-[22px] mt-[16px] 
+          transition-transform duration-150 ease-in-out active:translate-y-1 active:scale-95">
             <button
               type="submit"
-              className="w-full text-center text-white py-[0.5em] px-[1em] font-jersey text-lg
-                bg-[#76778b] hover:bg-[#8633cd] 
-                active:shadow-[inset_3px_3px_0px_0px_#3a1260]
-                hover:shadow-[inset_-4px_-4px_0px_0px_#3a1260]
+              className="w-full text-center text-white py-1.5 font-jersey text-s
+                bg-[#76778b] hover:bg-[#3a8eba]
+                active:shadow-[inset_3px_3px_0px_0px_#396e8b]
+                hover:shadow-[inset_-4px_-4px_0px_0px_#396e8b]
                 shadow-[inset_-3px_-3px_0px_0px_#49484e]
                 transition duration-200 ease-in-out transform
-                flex items-center justify-around gap-4 h-auto z-20 rounded-md"
+                flex items-center justify-center gap-1 h-auto z-20 rounded-md"
               onMouseOver={() => {
                 document
                   .querySelector(".contact-btn")
@@ -157,7 +156,7 @@ const Contact = () => {
                 className="contact-btn sm:w-[24px] sm:h-[24px] w-[22px] h-[22px] object-contain"
               />
             </button>
-            {/* Bordures rétro du bouton */}
+            {/* Bordures du bouton */}
             {["top", "bottom"].map((pos) => (
               <div
                 key={pos}

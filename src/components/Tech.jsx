@@ -11,16 +11,14 @@ import SectionArrow from './SectionArrow';
 const Tech = () => {
   return (
       <section id="tech" className="relative flex flex-col justify-between h-full">
-        {/* Contenu principal */}
         <div>
-          {/* Conteneur pour assurer que la bordure s'affiche correctement */}
           <div className="w-full flex" style={{ display: 'block' }}>
             <div className="border-8bit-title" style={{ display: 'block', position: 'relative', boxSizing: 'border-box' }}>
               <motion.div
                 variants={textVariant()}
                 className="section-title flex flex-row-reverse items-center gap-6 py-2"
               >
-                {/* Image à gauche */}
+
                 <div>
                   <img
                     src={reversePortrait}
@@ -29,7 +27,6 @@ const Tech = () => {
                   />
                 </div>
   
-                {/* Bloc centré */}
                 <div className="flex-1 flex justify-center">
               <div className="text-left">
                 <motion.h2

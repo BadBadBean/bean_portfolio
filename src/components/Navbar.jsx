@@ -14,7 +14,8 @@ const Navbar = () => {
     className={`${styles.paddingX} w-full font-jersey flex items-center py-2 absolute 
       top-0 z-20 sm:opacity-[0.97] xxs:h-[12vh] transition-all duration-300`}>
       <div className="w-full mx-auto flex justify-between items-center">
-        {/* Logo à gauche */}
+
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -29,7 +30,7 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Liens de navigation au centre */}
+        {/* Liens de navigation */}
         <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
           {navLinks.map((nav) => (
             <li
@@ -44,7 +45,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Icônes réseaux à droite */}
+        {/* Icônes réseaux */}
         <div className="hidden sm:flex gap-5 items-center">
           <a
             href="https://github.com/BadBadBean"
@@ -60,7 +61,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile */}
         <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
           {toggle ? (
             <div
@@ -94,7 +95,7 @@ const Navbar = () => {
                 ))}
               </ul>
 
-              {/* Icônes réseaux dans le menu mobile */}
+              {/* Icônes mobile */}
               <div className="flex gap-6 mt-10 ml-6">
                 <a
                   href="https://github.com/BadBadBean"

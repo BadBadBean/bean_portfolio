@@ -69,11 +69,10 @@ const Box = ({ imgUrl }) => {
             color="#5863d7"
             emissive={glowColor}
             emissiveIntensity={0.2}
-            metalness={0
-            }
+            metalness={0}
             roughness={0.9}
             polygonOffset
-            polygonOffsetFactor={5} // Augmenté pour éviter le z-fighting
+            polygonOffsetFactor={5}
           />
           
           {textureLoaded && (
