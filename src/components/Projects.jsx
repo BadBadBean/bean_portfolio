@@ -23,8 +23,8 @@ const ProjectCard = ({
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className={`relative ${
-        isActive ? "lg:flex-[3.5] flex-[10]" : "lg:flex-[0.5] flex-[2]"
-      } flex items-center justify-center min-w-[170px] h-[420px] h-[px] cursor-pointer card-shadow`}
+        isActive ? "lg:flex-[3.5]" : "lg:flex-[0.5]"
+      } w-full lg:w-auto flex items-center justify-center min-w-[170px] h-[420px] cursor-pointer card-shadow`}
       onClick={() => handleClick(id)}
     >
       {/* Overlay & Image */}
@@ -51,7 +51,7 @@ const ProjectCard = ({
 
       {/* Top Banner */}
       {isActive ? (
-  <div className="absolute top-0 left-0 right-0 z-20 bg-[#072d7d] border-8bit px-4 py-2 flex justify-between items-center -mx-4 -mt-4">
+  <div className="absolute top-0 left-0 right-0 z-20 bg-[#072d7d] border-8bit px-4 py-2 flex justify-between items-center xl:-mx-4 xl:-mt-4">
     <h2 className="font-bold sm:text-[20px] text-[16px] text-timberWolf uppercase font-jersey truncate">
       {name}
     </h2>
@@ -72,7 +72,7 @@ const ProjectCard = ({
   </div>
 ) : (
   // Bottom banner
-  <div className="absolute bottom-0 left-0 right-0 z-10 bg-[#072d7d] border-8bit px-4 py-1 text-center -mx-2">
+  <div className="absolute bottom-0 left-0 right-0 z-10 bg-[#072d7d] border-8bit px-4 py-4 lg:py-1 text-center xl:-mx-2">
     <h3 className="font-bold sm:text-[16px] text-[14px] text-timberWolf uppercase font-jersey truncate">
       {name}
     </h3>
@@ -81,7 +81,7 @@ const ProjectCard = ({
 
       {/* Content: if active */}
       {isActive && (
-        <div className="absolute bottom-0 left-0 right-0 z-20 border-8bit bg-[#052D7D] p-4 -mx-4">
+        <div className="absolute bottom-0 left-0 right-0 z-20 border-8bit bg-[#052D7D] p-4 xl:-mx-4">
           <p className="text-silver text-[13px] sm:text-[14px] leading-[20px] font-poppins tracking-[1px]">
             {description}
           </p>
@@ -172,7 +172,7 @@ const Projects = () => {
           viewport={{ once: false, amount: 0.25 }}
           className={`${styles.innerWidth} mx-auto flex flex-col`}
         >
-          <div className="mt-[50px] flex lg:flex-row flex-col gap-[4.5rem]">
+          <div className="mt-[50px] flex lg:flex-row flex-col xl:gap-[4.5rem] gap-[2.5rem]">
             {projects.map((project, index) => (
               <ProjectCard
                 key={project.id}

@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   color-scheme: dark;
 }
 
@@ -25,6 +25,12 @@
 
 .vertical-timeline.vertical-timeline-custom-line::before {
   background: #305fc785;
+}
+
+@media (min-width: 1025px ) {
+  .vertical-timeline.vertical-timeline-custom-line::before {
+    height: 630px;
+  }
 }
 
 .vertical-timeline-element-icon {
@@ -109,7 +115,7 @@ section {
 }
 
 #experience {
-  min-height: 120vh;
+  min-height: 100vh;
 }
 
 
@@ -145,18 +151,18 @@ footer p {
   text-align: center;
 }
 
-footer img {
+/* footer img {
   width: 100%;
-}
+} */
 
-.footer-gif {
+/* .footer-gif {
   max-width: 700px;
   position: absolute;
   z-index: -1;
   bottom: 150px;
   right: 200px;
 
-}
+} */
 
 .input-group {
   position: relative;

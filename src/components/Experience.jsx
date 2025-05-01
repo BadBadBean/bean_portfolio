@@ -22,7 +22,7 @@ const ExperienceCard = ({ experience }) => (
     }}
     date={
       <div>
-        <h3 className="text-flashWhite text-[24px] font-jersey">
+        <h3 className="text-flashWhite text-[14px] font-jersey">
           {experience.date}
         </h3>
       </div>
@@ -38,7 +38,7 @@ const ExperienceCard = ({ experience }) => (
       </div>
     }>
     <div>
-      <h3 className="text-flashWhite text-[24px] font-bold font-jersey tracking-[2px]">
+      <h3 className="text-flashWhite text-[18px] sm:text-[24px] font-jersey tracking-[2px]">
         {experience.title}
       </h3>
       <p
@@ -89,7 +89,7 @@ const Experience = () => {
       </div>
 
       {/* Timeline */} 
-      <div className="mt-16 flex flex-col">
+      <div className=" flex flex-col">
         <VerticalTimeline className="vertical-timeline-custom-line">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience}/>

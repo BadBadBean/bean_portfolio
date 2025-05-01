@@ -20,7 +20,7 @@ const SectionArrow = ({ targetId, direction = "down", className = "" }) => {
       transition={{ duration: 0.3 }}
       className={`absolute z-50 ${
         direction === "down" ? "bottom-3" : "top-3"
-      } left-1/2 transform -translate-x-1/2 -ml-[20px]  ${className}`}
+      } left-1/2 transform -translate-x-1/2 -ml-[20px] ${className}`}
     >
       <motion.img
     src={direction === "down" ? arrowDown : arrowUp}

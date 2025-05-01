@@ -88,7 +88,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-wrap lg:gap-[8vw] gap-[25vw] justify-center">
+        <div className="mt-20 xs:mx-[20px] flex flex-wrap gap-[25vw] md:gap-[15vw] lg:gap-[8vw] justify-center">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

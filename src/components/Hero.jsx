@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { bean, darkbg } from '../assets';
+import { bean, darkbg, download } from '../assets';
 import SectionArrow from './SectionArrow';
 
 const Hero = () => {
@@ -27,8 +27,8 @@ const Hero = () => {
         className="relative flex sm:flex-row flex-col w-full h-screen mx-auto 
         sm:bg-hero bg-hero-mobile overflow-hidden">
         <div
-          className={`absolute inset-0 sm:top-[250px] top-[150px] 
-          lg:top-[150px] xl:top-[250px] ${styles.paddingX} 
+          className={`absolute inset-0 sm:top-[125px] top-[150px] 
+          lg:top-[200px] ${styles.paddingX} 
           max-w-7xl mx-auto flex flex-row items-start
           justify-between gap-3`}>
           <div className="flex flex-col justify-center items-center mt-5 ml-3">
@@ -47,10 +47,42 @@ const Hero = () => {
                 Delphine
               </span>
             </h1>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
+            <p className={`${styles.heroSubText} mt-2 text-eerieBlack font-jersey`}>
               Lorem ipsum dolor sit amet. <br className="sm:block hidden" />
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </p>
+            <button
+              className="w-fit text-center text-white py-[0.5em] px-[1em] font-jersey text-s
+                bg-[#76778b] hover:bg-[#3a8eba]
+                active:shadow-[inset_3px_3px_0px_0px_#396e8b]
+                hover:shadow-[inset_-4px_-4px_0px_0px_#396e8b]
+                shadow-[inset_-3px_-3px_0px_0px_#49484e]
+                transition duration-200 ease-in-out transform
+                flex items-center justify-center gap-1 h-auto z-20 rounded-md mt-8"
+              onClick={() =>
+                window.open(
+                  'resume link', //paste the link to your resume here
+                  '_blank'
+                )
+              }
+              onMouseOver={() => {
+                document
+                  .querySelector('.download-btn')
+                  .setAttribute('src', downloadHover);
+              }}
+              onMouseOut={() => {
+                document
+                  .querySelector('.download-btn')
+                  .setAttribute('src', download);
+              }}>
+              MY RESUME
+              <img
+                src={download}
+                alt="download"
+                className="download-btn sm:w-[26px] sm:h-[26px] 
+                w-[23px] h-[23px] object-contain"
+              />
+            </button>
           </div>
           <div
             className="w-screen flex flex-col items-start 
@@ -61,8 +93,8 @@ const Hero = () => {
 
         <div>
           <img
-            className="absolute bottom-[100px] ml-[70vw] 
-             w-[180px] sm:w-[220px] md:w-[260px] 
+            className="absolute bottom-[100px] ml-[40vw] sm:ml-[70vw] 
+             w-[220px] md:w-[260px] 
              h-auto object-contain"
             src={bean}
             alt="shaquille"
