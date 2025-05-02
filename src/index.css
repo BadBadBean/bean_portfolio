@@ -151,6 +151,14 @@ footer p {
   text-align: center;
 }
 
+footer a {
+  color: #649EB9;
+}
+
+footer a:hover {
+  color: #DB4A91;
+}
+
 /* footer img {
   width: 100%;
 } */
@@ -166,7 +174,13 @@ footer p {
 
 .input-group {
   position: relative;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+@media (min-width: 1025px ) {
+  .input-group {
+    margin-top: 50px;
+}
 }
 
 /* ------------------- INPUT / TEXTAREA de base ------------------- */

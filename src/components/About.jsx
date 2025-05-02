@@ -22,7 +22,7 @@ const ServiceCard = ({ index, title, icon, description, level, rank }) => {
       viewport={{ once: true, amount: 0.2 }}
       className="xs:w-[250px] bg-[#1d2c71] text-white border-8bit relative font-jersey flex justify-between flex-col min-h-[50dvh]"
     >
-      <div className='flex justify-between bg-[#1d2c71] border-8bit px-6 py-2 items-center -mx-6 -mt-4 mb-4'>
+      <div className='flex justify-between bg-[#1d2c71] border-8bit px-6 py-2 items-center md:-mx-6 md:-mt-4 md:mb-4'>
         <h3 className="text-[24px]">{title}</h3>
         <p className='text-white text-[24px]'>{level}</p>
       </div>
@@ -31,7 +31,7 @@ const ServiceCard = ({ index, title, icon, description, level, rank }) => {
         <img src={icon} alt={title} className="w-[80%] object-contain m-auto mb-8" />
       </div>
 
-      <div className="-mx-4 -mt-4 -mb-2 border-8bit bg-[#1d2c71] p-2 h-[25%] flex flex-col justify-around">
+      <div className="md:-mx-4 -mt-4 -mb-2 border-8bit bg-[#1d2c71] p-2 h-[25%] flex flex-col justify-around">
         <div 
           className='-mx-4 py-2 text-center text-[20px] -mt-8 rounded-md border-8bit' 
           style={{ backgroundColor }}
