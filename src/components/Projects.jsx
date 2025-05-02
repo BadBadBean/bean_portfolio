@@ -84,7 +84,7 @@ const ProjectCard = ({
             
             ))}
           </div>
-        <p className="text-silver text-[13px] sm:text-[14px] leading-[20px] font-poppins tracking-[1px]">
+        <p className="text-silver text-[16px] sm:text-[18px] leading-[20px] font-jersey">
           {description}
         </p>
 

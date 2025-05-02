@@ -30,7 +30,7 @@ const SectionHeader = ({
             />
           </div>
 
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 flex justify-center items-center">
             <div className="text-left">
               <motion.h2
                 variants={fadeIn("", "", 0.2, 1)}

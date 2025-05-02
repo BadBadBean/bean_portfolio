@@ -48,11 +48,11 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack font-jersey`}>
-              Bienvenue sur mon portfolio. <br className="sm:block hidden" />
-              Ici, blablabla
+              Bienvenue sur mon portfolio ! <br className="sm:block hidden" />
+              Après des heures de bidouilles et de tutos, j’ai décidé de passer au niveau supérieur : faire une reconversion professionnelle et devenir développeuse&nbsp;🚀
             </p>
             <button
-              className="w-fit text-center text-white py-[0.5em] px-[1em] font-jersey text-[20px]
+              className="w-fit text-center text-white py-[0.5em] px-[1em] font-jersey text-[16px] sm:text-[20px]
                 bg-[#76778b] hover:bg-[#3a8eba]
                 active:shadow-[inset_3px_3px_0px_0px_#396e8b]
                 hover:shadow-[inset_-4px_-4px_0px_0px_#396e8b]

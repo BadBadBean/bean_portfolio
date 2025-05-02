@@ -118,13 +118,14 @@
 section {
     scroll-snap-align: start;
     min-height: 100vh;
+    padding: 35px 50px 0;
+}
+
+@media (min-width: 640px ){
+  #contact {
     padding: 80px 50px 0;
 }
-
-#experience {
-  min-height: 100vh;
 }
-
 
 nav a {
   background: linear-gradient(to right, #4397BF,#CB4484,#4397BF);

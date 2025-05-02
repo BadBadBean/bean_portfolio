@@ -23,7 +23,7 @@ const ExperienceCard = ({ experience }) => (
     }}
     date={
       <div>
-        <h3 className="text-flashWhite text-[14px] font-jersey">
+        <h3 className="text-flashWhite text-[24px] font-jersey">
           {experience.date}
         </h3>
       </div>
