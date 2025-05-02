@@ -26,7 +26,7 @@ const SectionHeader = ({
             <img
               src={imgSrc}
               alt={imgAlt}
-              className="max-w-[100px] h-auto object-contain"
+              className="max-w-[80px] xmd:max-w-[100px] h-auto object-contain"
             />
           </div>
 
