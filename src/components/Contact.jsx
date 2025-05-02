@@ -112,7 +112,7 @@ const Contact = () => {
           transition-transform duration-150 ease-in-out active:translate-y-1 active:scale-95">
             <button
               type="submit"
-              className="w-full text-center text-white py-1.5 font-jersey text-s
+              className="w-full text-center text-white py-1.5 font-jersey text-[20px]
                 bg-[#76778b] hover:bg-[#3a8eba]
                 active:shadow-[inset_3px_3px_0px_0px_#396e8b]
                 hover:shadow-[inset_-4px_-4px_0px_0px_#396e8b]
