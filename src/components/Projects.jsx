@@ -13,6 +13,7 @@ const ProjectCard = ({
   image,
   repo,
   demo,
+  tags,
   index,
   active,
   handleClick,
@@ -72,6 +73,16 @@ const ProjectCard = ({
 
       {/* Contenu détaillé — toujours visible en mobile, seulement si actif en lg+ */}
       <div className={`absolute bottom-0 left-0 right-0 z-20 border-8bit bg-[#052D7D] p-4 xl:-mx-4 ${isActive ? "lg:block" : "lg:hidden"} block`}>
+      <div className="flex flex-wrap gap-2 mb-2">
+            {tags.map((tag) => (
+              <span key={tag.name}
+              className={`px-[1em] py-[0.1em] text-s bg-[#000080] font-jersey uppercase border-[2px] border-black text-white shadow-[2px_2px_0_#000]`}
+            >
+              {tag.name}
+            </span>
+            
+            ))}
+          </div>
         <p className="text-silver text-[13px] sm:text-[14px] leading-[20px] font-poppins tracking-[1px]">
           {description}
         </p>

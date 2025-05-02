@@ -33,7 +33,7 @@ const ServiceCard = ({ index, title, icon, description, level, rank }) => {
 
       <div className="md:-mx-4 -mt-4 -mb-2 border-8bit bg-[#1d2c71] p-2 h-[25%] flex flex-col justify-around">
         <div 
-          className='-mx-4 py-2 text-center text-[20px] -mt-8 rounded-md border-8bit' 
+          className='-mx-4 py-2 text-center  text-[20px] -mt-8 rounded-md border-8bit' 
           style={{ backgroundColor }}
         >
           {rank}

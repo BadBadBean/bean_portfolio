@@ -17,6 +17,13 @@
   color-scheme: dark;
 }
 
+@media (min-width: 1025px ) {
+  * {
+   scroll-snap-type: y mandatory;
+  }
+}
+
+
 .hero-heading {
   font-family: '', sans-serif;
   text-transform: uppercase;
