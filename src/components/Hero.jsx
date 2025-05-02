@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { bean, darkbg, download, arrowRightWhite } from '../assets';
+import { bean, darkbg, arrowRightWhite } from '../assets';
 import SectionArrow from './SectionArrow';
 
 const Hero = () => {
@@ -11,14 +11,14 @@ const Hero = () => {
       <div id="hero" className="absolute pt-50px left-0 z-0 h-[100vh] w-full object-bottom">
         <img
           src={darkbg}
-          alt="world map"
+          alt="background de jeu vidéo 8bit de nuit"
           className="w-full h-full sm:block hidden object-cover object-[center_80%]"
         />
       </div>
       <div className="absolute top-0 left-0 z-0 h-[100vh] w-full">
         <img
           src={darkbg}
-          alt="world map"
+          alt="background de jeu vidéo 8bit de nuit"
           className="w-full h-full sm:hidden block object-cover"
         />
       </div>
@@ -78,7 +78,7 @@ const Hero = () => {
               VOIR MON CV
               <img
                 src={arrowRightWhite}
-                alt="download"
+                alt="cliquez pour voir mon cv"
                 className="download-btn w-[18px] h-[18px] object-contain"
               />
             </button>
@@ -96,7 +96,7 @@ const Hero = () => {
              w-[220px] md:w-[260px] 
              h-auto object-contain"
             src={bean}
-            alt="shaquille"
+            alt="personnage 8bit"
           />
         </div>
         <SectionArrow targetId="about" direction="down" />

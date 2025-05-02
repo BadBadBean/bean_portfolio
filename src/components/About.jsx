@@ -6,7 +6,7 @@ import { portrait } from "../assets";
 import SectionArrow from "./SectionArrow";
 import SectionHeader from "./SectionHeader";
 
-const ServiceCard = ({ index, title, icon, description, level, rank }) => {
+const ServiceCard = ({ index, title, icon, description, rank }) => {
   const rankColorMap = {
     Compagnon: "#AF6DE7",
     Apprentie: "#BA4488",

@@ -1,3 +1,5 @@
+/* ------------------- GENERAL ------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -13,7 +15,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* scroll-snap-type: y mandatory; */
   color-scheme: dark;
 }
 
@@ -21,66 +22,6 @@
   * {
    scroll-snap-type: y mandatory;
   }
-}
-
-
-.hero-heading {
-  font-family: '', sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.vertical-timeline.vertical-timeline-custom-line::before {
-  background: #305fc785;
-}
-
-@media (min-width: 1025px ) {
-  .vertical-timeline.vertical-timeline-custom-line::before {
-    height: 630px;
-  }
-}
-
-.vertical-timeline-element-icon {
-  box-shadow: 0 0 0 4px #305fc7, inset 0 2px 0 rgba(0, 0, 0, 0.08),
-    0 3px 0 4px rgba(0, 0, 0, 0.05);
-}
-
-.glassmorphism {
-  background: rgba(20, 20, 20, 0.7);
-  box-shadow: 0 8px 32px 0 rgba(133, 133, 133, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-.card-shadow {
-  box-shadow: rgba(155, 155, 155, 0.3) 0 2px 6px,
-    rgba(155, 155, 155, 0.22) 0 0 4px;
-  border-radius: 24px;
-}
-
-.black-gradient {
-  background: #000000;
-  background: -webkit-linear-gradient(to right, #434343, #000000);
-  background: linear-gradient(to right, #434343, #000000);
-}
-
-.bw-gradient {
-  background: rgb(10, 10, 10);
-  background: linear-gradient(
-    180deg,
-    rgba(10, 10, 10, 0.8) 40%,
-    rgba(153, 153, 161, 0) 70%
-  );
-}
-
-.card-gradient {
-  background: rgb(244, 244, 246);
-  background: linear-gradient(
-    158deg,
-    rgba(153, 153, 161, 1) 25%,
-    rgba(153, 153, 161, 1) 100%
-  );
 }
 
 .border-8bit-title {
@@ -118,14 +59,16 @@
 section {
     scroll-snap-align: start;
     min-height: 100vh;
-    padding: 35px 50px 0;
-}
-
-@media (min-width: 640px ){
-  #contact {
     padding: 80px 50px 0;
 }
+
+@media (max-width: 639px ){
+  #contact {
+    padding: 35px 50px 0;
 }
+}
+
+/* ------------------- NAVBAR ------------------- */
 
 nav a {
   background: linear-gradient(to right, #4397BF,#CB4484,#4397BF);
@@ -145,6 +88,40 @@ nav a:hover{
   50%{background-position:right}
   100%{background-position:left}
 }
+
+
+/* ------------------- HERO ------------------- */
+
+.hero-heading {
+  font-family: '', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* ------------------- TIMELINE ------------------- */
+
+.vertical-timeline.vertical-timeline-custom-line::before {
+  background: #305fc785;
+}
+
+@media (min-width: 1025px ) {
+  .vertical-timeline.vertical-timeline-custom-line::before {
+    height: 630px;
+  }
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #305fc7, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-shadow {
+  box-shadow: rgba(155, 155, 155, 0.3) 0 2px 6px,
+    rgba(155, 155, 155, 0.22) 0 0 4px;
+  border-radius: 24px;
+}
+
+/* ------------------- FOOTER ------------------- */
 
 footer {
   position: absolute;
@@ -167,18 +144,7 @@ footer a:hover {
   color: #DB4A91;
 }
 
-/* footer img {
-  width: 100%;
-} */
-
-/* .footer-gif {
-  max-width: 700px;
-  position: absolute;
-  z-index: -1;
-  bottom: 150px;
-  right: 200px;
-
-} */
+/* ------------------- FORMULAIRE ------------------- */
 
 .input-group {
   position: relative;
@@ -191,7 +157,6 @@ footer a:hover {
 }
 }
 
-/* ------------------- INPUT / TEXTAREA de base ------------------- */
 .input-group input,
 .input-group textarea {
   width: 100%;
@@ -210,7 +175,7 @@ footer a:hover {
     0 0 0 4px rgba(0, 0, 255, 0.5);
 }
 
-/* ------------------- OUTLINE dynamique ------------------- */
+/* --- OUTLINE --- */
 .input-group input:focus:invalid,
 .input-group textarea:focus:invalid {
   outline-color: #0ef;
@@ -226,7 +191,8 @@ footer a:hover {
   outline-color: rgb(127, 224, 127);
 }
 
-/* ------------------- LABEL positionné au-dessus ------------------- */
+/* --- LABEL --- */
+
 .input-group label {
   position: absolute;
   left: 15px;
@@ -240,7 +206,8 @@ footer a:hover {
   padding: 0 5px;
 }
 
-/* ------------------- LABEL animé au focus ou champ rempli ------------------- */
+/* --- LABEL FLOTTANT --- */
+
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label,
 .input-group textarea:focus + label,
@@ -254,7 +221,8 @@ footer a:hover {
   border: 1px solid;
 }
 
-/* ------------------- LABEL BLEU au focus (par défaut) ------------------- */
+/* --- LABEL BLEU au focus --- */
+
 .input-group input:focus + label,
 .input-group textarea:focus + label {
   border-color: #0ef;
@@ -265,7 +233,8 @@ footer a:hover {
     0 -4px rgba(0, 0, 255, 0.5), 0 4px rgba(0, 0, 255, 0.5);
 }
 
-/* ------------------- LABEL ROUGE si champ invalide rempli ------------------- */
+/* --- LABEL ROUGE si champ invalide --- */
+
 .input-group input:invalid:not(:placeholder-shown) + label,
 .input-group textarea:invalid:not(:placeholder-shown) + label {
   border-color: rgb(231, 96, 96);
@@ -276,7 +245,8 @@ footer a:hover {
     0 -4px rgba(255, 0, 0, 0.5), 0 4px rgba(255, 0, 0, 0.5);
 }
 
-/* ------------------- LABEL VERT si champ valide rempli ------------------- */
+/* --- LABEL VERT si champ valide --- */
+
 .input-group input:valid:not(:placeholder-shown) + label,
 .input-group textarea:valid:not(:placeholder-shown) + label {
   border-color: rgb(127, 224, 127);

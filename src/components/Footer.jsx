@@ -3,8 +3,6 @@ import { footerbg } from "../assets";
 export default function Footer() {
     return (
       <footer className="font-jersey">
-        {/* <img className="footer-gif" src={fireworks}
-        /> */}
         <img  className="w-full h-[60px] object-cover object-top" src={footerbg}
         />
         <p className="text-[14px] xs:text-[18px]">

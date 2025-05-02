@@ -18,7 +18,6 @@ const SectionArrow = ({ targetId, direction = "down", className = "" }) => {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: isVisible ? 1 : 0, y: 0 }}
       transition={{ duration: 0.3 }}
-      // Caché sur mobile, visible uniquement en lg et +
       className={`hidden lg:block absolute z-50 ${
         direction === "down" ? "bottom-3" : "top-3"
       } left-1/2 transform -translate-x-1/2 -ml-[20px] ${className}`}

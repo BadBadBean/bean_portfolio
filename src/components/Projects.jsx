@@ -51,7 +51,6 @@ const ProjectCard = ({
         <div className="absolute inset-0 hover:shadow-[inset_-5px_-5px_0px_0px_#4AA52E] transition-shadow duration-300"></div>
       </div>
 
-      {/* Titre du haut — toujours visible en mobile, seulement si actif en lg+ */}
       <div className={`absolute top-0 left-0 right-0 z-20 bg-[#072d7d] border-8bit px-4 py-2 flex justify-between items-center xl:-mx-4 xl:-mt-4 ${isActive ? "lg:flex" : "lg:hidden"} flex`}>
         <h2 className="font-bold sm:text-[20px] text-[16px] text-timberWolf uppercase font-jersey truncate">
           {name}
@@ -66,13 +65,12 @@ const ProjectCard = ({
         >
           <img
             src={mygithub}
-            alt="source code"
+            alt="Lien vers le code sur github"
             className="w-4/5 h-4/5 object-contain"
           />
         </div>
       </div>
 
-      {/* Contenu détaillé — toujours visible en mobile, seulement si actif en lg+ */}
       <div className={`absolute bottom-0 left-0 right-0 z-20 border-8bit bg-[#052D7D] p-4 xl:-mx-4 ${isActive ? "lg:block" : "lg:hidden"} block`}>
       <div className="flex flex-wrap gap-2 mb-2">
             {tags.map((tag) => (
@@ -136,7 +134,6 @@ const Projects = () => {
   title="Projets"
   description="Voici quelques uns de mes projets. Les trois premiers ont été réalisés dans le cadre de la formation Intégrateur Web de Openclassrooms et les deux derniers sont des projets personnels."
   imgSrc={portrait}
-  imgAlt="Portrait image"
   imgPosition="left"
   className="mb-10"
 />
@@ -163,7 +160,6 @@ const Projects = () => {
         </motion.div>
       </div>
 
-      {/* Flèches de navigation */}
       <SectionArrow targetId="experience" direction="down" />
       <SectionArrow targetId="tech" direction="up" />
     </section>

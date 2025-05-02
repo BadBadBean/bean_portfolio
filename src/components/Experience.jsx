@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
 import { experiences } from "../constants";
-import { download, downloadHover, resume, reversePortrait } from "../assets";
+import { reversePortrait } from "../assets";
 import { textVariant, fadeIn } from "../utils/motion";
 import SectionArrow from "../components/SectionArrow";
 import SectionHeader from "./SectionHeader";
@@ -59,8 +59,7 @@ const Experience = () => {
   title="Expériences"
   description="Un petit résumé de mon parcours dans le milieu du développement web."
   imgSrc={reversePortrait}
-  imgAlt="Portrait image"
-  imgPosition="right" // or "left"
+  imgPosition="right"
   className="mb-10"
 />
 

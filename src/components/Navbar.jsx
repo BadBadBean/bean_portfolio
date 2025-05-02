@@ -76,7 +76,7 @@ const Navbar = () => {
       <div className="flex justify-end">
         <img
           src={close}
-          alt="close"
+          alt="fermer la fênetre"
           className="w-[22px] h-[22px] object-contain cursor-pointer"
           onClick={() => setToggle(!toggle)}
         />

@@ -44,24 +44,8 @@ export default {
       },
       backgroundImage: {
         site: "url('./assets/backgrounds/bg-main.jpg')",
-        // about:
-        //   'linear-gradient(165deg, rgba(244,244,246,1) 100%, rgba(122,122,122,1) 100%)',
-        // experience:
-        //   "linear-gradient(135deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.2) 100%),url('/src/assets/backgrounds/white-abstract.png')",
-        // experienceLight:
-        //   'linear-gradient(137deg, rgba(244,244,246,0.5) 60%, rgba(10,10,10,0.9) 60%)',
-        // // hero: 'linear-gradient(135deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,0.95) 60%)',
-        // // 'hero-mobile':
-        // //   'linear-gradient(137deg, rgba(244,244,246,0.8) 60%, rgba(10,10,10,1) 60%)',
-        // tech: "linear-gradient(165deg, rgba(20,20,20,0.8) 100%, rgba(109,109,116,0.8) 100%), url('/src/assets/backgrounds/bg-tech.jpg')",
       },
       fontFamily: {
-        // arenq: ['Arenq'],
-        // beckman: ['Beckman'],
-        // mova: ['Mova'],
-        // overcameBold: ['Overcame Bold'],
-        // overcameOutline: ['Overcame Outline'],
-        // poppins: ['Poppins', 'sans-serif'],
         jersey: ['"Jersey 10"', 'sans-serif'],
       },
     },

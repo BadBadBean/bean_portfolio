@@ -62,7 +62,6 @@ const Contact = () => {
   title="Contact"
   description="N'hésitez pas à venir me parler de vos projets !"
   imgSrc={portrait}
-  imgAlt="Portrait image"
   imgPosition="left"
   className="mb-10"
 />

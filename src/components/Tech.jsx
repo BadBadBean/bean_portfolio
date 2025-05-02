@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { textVariant } from '../utils/motion';
@@ -17,7 +16,6 @@ const Tech = () => {
   title="Technologies"
   description="Voici un aperçu des technologies et langages de programmation que j'utilise pour organiser et réaliser mes projets."
   imgSrc={reversePortrait}
-  imgAlt="Portrait image"
   imgPosition="right"
   className="mb-10"
 />
