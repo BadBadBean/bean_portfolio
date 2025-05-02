@@ -9,6 +9,7 @@ import { experiences } from "../constants";
 import { download, downloadHover, resume, reversePortrait } from "../assets";
 import { textVariant, fadeIn } from "../utils/motion";
 import SectionArrow from "../components/SectionArrow";
+import SectionHeader from "./SectionHeader";
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -54,39 +55,14 @@ const Experience = () => {
   return (
     <section id="experience" className="relative flex flex-col h-full">
       {/* Titre 8-bit */}
-      <div className="w-full">
-        <div className="border-8bit-title">
-          <motion.div
-            variants={textVariant()}
-            className="section-title flex flex-row-reverse items-center gap-4 py-2"
-          >
-            <div>
-              <img
-                src={reversePortrait}
-                className="max-w-[100px] h-auto object-contain"
-                alt="portrait"
-              />
-            </div>
-
-            <div className="flex-1 flex justify-center">
-              <div className="text-left">
-                <motion.h2
-                  variants={fadeIn("", "", 0.2, 1)}
-                  className="text-[26px] sm:text-[32px] text-white font-jersey"
-                >
-                  Work Experience.
-                </motion.h2>
-                <motion.p
-                  variants={fadeIn("", "", 0.1, 1)}
-                  className="text-flashWhite font-jersey text-[18px] leading-[26px]"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at consectetur nibh. Praesent dictum dui eu porta congue. Vestibulum convallis sagittis purus sit amet interdum. 
-                </motion.p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+      <SectionHeader
+  title="Experiences."
+  description="Explore my favorite work — a mix of front-end design and back-end logic."
+  imgSrc={reversePortrait}
+  imgAlt="Portrait image"
+  imgPosition="right" // or "left"
+  className="mb-10"
+/>
 
       {/* Timeline */} 
       <div className=" flex flex-col">

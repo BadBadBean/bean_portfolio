@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { slideIn, textVariant, fadeIn } from "../utils/motion";
 import { arrowRight, portrait } from "../assets";
 import SectionArrow from "./SectionArrow";
+import SectionHeader from "./SectionHeader";
 
 const Contact = () => {
   const formRef = useRef();
@@ -57,35 +58,14 @@ const Contact = () => {
       viewport={{ once: true, amount: 0.25 }}
     >
       {/* Titre */}
-      <motion.div variants={textVariant()} className="w-full">
-        <div className="border-8bit-title">
-          <div className="section-title flex flex-col sm:flex-row sm:items-center sm:gap-6 py-2">
-            <div>
-              <img
-                src={portrait}
-                className="max-w-[70px] sm:max-w-[100px] h-auto object-contain"
-                alt="portrait"
-              />
-            </div>
-            <div className="flex-1 flex justify-center">
-              <div className="text-left">
-                <motion.h2
-                  variants={fadeIn("", "", 0.2, 1)}
-                  className="text-[28px] sm:text-[40px] text-white font-jersey"
-                >
-                  Contact.
-                </motion.h2>
-                <motion.p
-                  variants={fadeIn("", "", 0.3, 1)}
-                  className="text-flashWhite font-jersey text-[18px] sm:text-[24px]"
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </motion.p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+      <SectionHeader
+  title="Contact."
+  description="Explore my favorite work — a mix of front-end design and back-end logic."
+  imgSrc={portrait}
+  imgAlt="Portrait image"
+  imgPosition="left"
+  className="mb-10"
+/>
 
       {/* Formulaire */}
       <motion.div

@@ -5,6 +5,7 @@ import { mygithub, portrait } from "../assets";
 import { projects } from "../constants";
 import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 import SectionArrow from "./SectionArrow";
+import SectionHeader from "./SectionHeader";
 
 const ProjectCard = ({
   id,
@@ -131,38 +132,14 @@ const Projects = () => {
     <section id="projects" className="relative flex flex-col justify-between h-full">
       <div className="flex-grow">
         {/* Titre de section */}
-        <div className="w-full">
-          <div className="border-8bit-title relative box-border">
-            <motion.div
-              variants={textVariant()}
-              className="section-title flex items-center gap-6 py-2"
-            >
-              <div>
-                <img
-                  src={portrait}
-                  className="max-w-[100px] h-auto object-contain"
-                  alt="portrait"
-                />
-              </div>
-              <div className="flex-1 flex justify-center text-left">
-                <div>
-                  <motion.h2
-                    variants={fadeIn("", "", 0.2, 1)}
-                    className="text-[26px] sm:text-[32px] text-white font-jersey"
-                  >
-                    Projects.
-                  </motion.h2>
-                  <motion.p
-                    variants={fadeIn("", "", 0.1, 1)}
-                    className="text-flashWhite font-jersey text-[18px] leading-[26px]"
-                  >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at consectetur nibh. Praesent dictum dui eu porta congue. Vestibulum convallis sagittis purus sit amet interdum.
-                  </motion.p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
+        <SectionHeader
+  title="Projects."
+  description="Explore my favorite work — a mix of front-end design and back-end logic."
+  imgSrc={portrait}
+  imgAlt="Portrait image"
+  imgPosition="left"
+  className="mb-10"
+/>
 
         {/* Cartes projets */}
         <motion.div
