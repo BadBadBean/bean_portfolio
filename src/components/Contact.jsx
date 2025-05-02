@@ -103,6 +103,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               placeholder=" "
+              className="h-24 sm:h-40 md:h-48"
             />
             <label>Votre message</label>
           </div>
