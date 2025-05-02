@@ -31,7 +31,7 @@ const ProjectCard = ({
     >
       {/* Overlay & Image */}
       <div className="absolute inset-0 border-8bit">
-        <div className="absolute top-0 left-0 z-10 bg-[#10132C] h-full w-full opacity-[0.6]"></div>
+        <div className="absolute top-0 left-0 z-10 bg-[#10132C] h-full w-full opacity-[0.7]"></div>
         <img src={image} alt={name} className="absolute w-full h-full object-cover" />
 
         {/* Bordures 8bit */}
@@ -77,7 +77,7 @@ const ProjectCard = ({
       <div className="flex flex-wrap gap-2 mb-2">
             {tags.map((tag) => (
               <span key={tag.name}
-              className={`px-[1em] py-[0.1em] text-s bg-[#000080] font-jersey uppercase border-[2px] border-black text-white shadow-[2px_2px_0_#000]`}
+              className={`px-[1em] py-[0.1em] text-s bg-[#000080] font-jersey uppercase rounded-md border-[2px] border-black text-white shadow-[2px_2px_0_#000]`}
             >
               {tag.name}
             </span>
@@ -133,8 +133,8 @@ const Projects = () => {
       <div className="flex-grow">
         {/* Titre de section */}
         <SectionHeader
-  title="Projects."
-  description="Explore my favorite work — a mix of front-end design and back-end logic."
+  title="Projets"
+  description="Voici quelques uns de mes projets. Les trois premiers ont été réalisés dans le cadre de la formation Intégrateur Web de Openclassrooms et les deux derniers sont des projets personnels."
   imgSrc={portrait}
   imgAlt="Portrait image"
   imgPosition="left"
@@ -146,7 +146,7 @@ const Projects = () => {
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.25 }}
+          viewport={{ once: true, amount: 0.25 }}
           className={`${styles.innerWidth} mx-auto flex flex-col`}
         >
           <div className="mt-[50px] flex lg:flex-row flex-col gap-[4.5rem]">

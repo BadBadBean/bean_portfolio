@@ -56,8 +56,8 @@ const Experience = () => {
     <section id="experience" className="relative flex flex-col h-full">
       {/* Titre 8-bit */}
       <SectionHeader
-  title="Experiences."
-  description="Explore my favorite work — a mix of front-end design and back-end logic."
+  title="Expériences"
+  description="Un petit résumé de mon parcours dans le milieu du développement web."
   imgSrc={reversePortrait}
   imgAlt="Portrait image"
   imgPosition="right" // or "left"

@@ -14,6 +14,7 @@ import reversePortrait from './personal/dialogue-portrait-reverse.png';
 import arrowUp from './icons/arrowUp.png';
 import arrowDown from './icons/arrowDown.png';
 import arrowRight from './icons/arrowRight.png';
+import arrowRightWhite from './icons/arrowRightWhite.png';
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
 import frontend from './icons/frontend.png';
@@ -69,6 +70,10 @@ import movie from './projects/movie-metro.png';
 import nyeusi from './projects/nyeusi.png';
 import space from './projects/space-hub.png';
 import booki from './projects/booki.png';
+import ohmyfood from './projects/ohmyfood.png';
+import nina from './projects/nina.png';
+import calculAge from './projects/calcul-age.png';
+import pomodoro from './projects/pomodoro.png';
 
 export {
   darkbg,
@@ -84,6 +89,7 @@ export {
   arrowUp,
   arrowDown,
   arrowRight,
+  arrowRightWhite,
   backend,
   ux,
   design,
@@ -135,4 +141,8 @@ export {
   diploma,
   book,
   computer,
+  ohmyfood,
+  nina,
+  calculAge,
+  pomodoro,
 };

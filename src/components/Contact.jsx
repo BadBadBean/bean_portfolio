@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { slideIn, textVariant, fadeIn } from "../utils/motion";
-import { arrowRight, portrait } from "../assets";
+import { arrowRightWhite, portrait } from "../assets";
 import SectionArrow from "./SectionArrow";
 import SectionHeader from "./SectionHeader";
 
@@ -59,8 +59,8 @@ const Contact = () => {
     >
       {/* Titre */}
       <SectionHeader
-  title="Contact."
-  description="Explore my favorite work — a mix of front-end design and back-end logic."
+  title="Contact"
+  description="N'hésitez pas à m'envoyer un message, je serais ravie d'entendre vos idées et de travailler avec vous sur vos futurs projets !"
   imgSrc={portrait}
   imgAlt="Portrait image"
   imgPosition="left"
@@ -82,7 +82,7 @@ const Contact = () => {
               required
               placeholder=" "
             />
-            <label>Your Name</label>
+            <label>Votre Name</label>
           </div>
           <div className="input-group">
             <input
@@ -93,7 +93,7 @@ const Contact = () => {
               required
               placeholder=" "
             />
-            <label>Your Email</label>
+            <label>Votre e-mail</label>
           </div>
           <div className="input-group">
             <textarea
@@ -104,7 +104,7 @@ const Contact = () => {
               required
               placeholder=" "
             />
-            <label>Your message</label>
+            <label>Votre message</label>
           </div>
 
           {/* Bouton d’envoi */}
@@ -122,9 +122,9 @@ const Contact = () => {
             >
               {loading ? "Envoi en cours" : "Envoyer"}
               <img
-                src={arrowRight}
+                src={arrowRightWhite}
                 alt="Envoyer"
-                className="contact-btn sm:w-[24px] sm:h-[24px] w-[22px] h-[22px] object-contain"
+                className="contact-btn w-[18px] h-[18px] object-contain"
               />
             </button>
 

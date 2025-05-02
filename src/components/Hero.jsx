@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { bean, darkbg, download } from '../assets';
+import { bean, darkbg, download, arrowRightWhite } from '../assets';
 import SectionArrow from './SectionArrow';
 
 const Hero = () => {
@@ -39,7 +39,7 @@ const Hero = () => {
           <div>
             <h1
               className={`${styles.heroHeadText} text-eerieBlack font-jersey uppercase`}>
-              Hi, I&apos;m{' '}
+              Moi, c&apos;est{' '}
               <span
                 className="sm:text-eerieBlack sm:text-[90px] lg:text-[150px]
                 text-eerieBlack text-[50px] font-jersey
@@ -48,11 +48,11 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack font-jersey`}>
-              Lorem ipsum dolor sit amet. <br className="sm:block hidden" />
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+              Bienvenue sur mon portfolio. <br className="sm:block hidden" />
+              Ici, blablabla
             </p>
             <button
-              className="w-fit text-center text-white py-[0.5em] px-[1em] font-jersey text-s
+              className="w-fit text-center text-white py-[0.5em] px-[1em] font-jersey text-[20px]
                 bg-[#76778b] hover:bg-[#3a8eba]
                 active:shadow-[inset_3px_3px_0px_0px_#396e8b]
                 hover:shadow-[inset_-4px_-4px_0px_0px_#396e8b]
@@ -61,7 +61,7 @@ const Hero = () => {
                 flex items-center justify-center gap-1 h-auto z-20 rounded-md mt-8"
               onClick={() =>
                 window.open(
-                  'resume link', //paste the link to your resume here
+                  'https://www.canva.com/design/DADmg6iYmuY/BmPXFcF-MuK41PwSzIRYww/edit?utm_content=DADmg6iYmuY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
                   '_blank'
                 )
               }
@@ -73,14 +73,13 @@ const Hero = () => {
               onMouseOut={() => {
                 document
                   .querySelector('.download-btn')
-                  .setAttribute('src', download);
+                  .setAttribute('src', arrowRightWhite);
               }}>
-              MY RESUME
+              VOIR MON CV
               <img
-                src={download}
+                src={arrowRightWhite}
                 alt="download"
-                className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
+                className="download-btn w-[18px] h-[18px] object-contain"
               />
             </button>
           </div>

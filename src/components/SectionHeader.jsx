@@ -19,11 +19,10 @@ const SectionHeader = ({
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
-          className={`section-title flex items-center gap-6 py-2 ${
-            isImageLeft ? "flex-row" : "flex-row-reverse"
-          }`}
+          className={`section-title flex flex-col gap-6 py-2 
+            ${isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"}`}
         >
-          <div>
+          <div className="flex justify-center lg:justify-start">
             <img
               src={imgSrc}
               alt={imgAlt}

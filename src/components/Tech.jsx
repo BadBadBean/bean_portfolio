@@ -14,8 +14,8 @@ const Tech = () => {
       <section id="tech" className="relative flex flex-col justify-between h-full">
         <div>
         <SectionHeader
-  title="Technologies."
-  description="Explore my favorite work — a mix of front-end design and back-end logic."
+  title="Technologies"
+  description="Voici un aperçu des technologies et langages de programmation que j'utilise pour organiser et réaliser mes projets."
   imgSrc={reversePortrait}
   imgAlt="Portrait image"
   imgPosition="right"

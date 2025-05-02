@@ -1,13 +1,8 @@
 import {
-  frontend,
   design,
   magnifyingGlass,
   gear,
   bulb,
-  novice,
-  backend,
-  ux,
-  prototyping,
   bootstrap,
   javascript,
   typescript,
@@ -24,23 +19,24 @@ import {
   prestashop,
   sass,
   wordpress,
-  komikult,
   leaderboard,
   math,
   movie,
   nyeusi,
   booki,
-  brain,
-  openclassrooms,
+  ohmyfood,
   diploma,
   book,
   computer,
+  nina,
+  calculAge,
+  pomodoro,
 } from '../assets';
 
 export const navLinks = [
   {
     id: 'about',
-    title: 'About',
+    title: 'Services',
   },
   {
     id: 'tech',
@@ -48,7 +44,7 @@ export const navLinks = [
   },
   {
     id: 'projects',
-    title: 'Projects',
+    title: 'Projets',
   },
   {
     id: 'experience',
@@ -62,31 +58,29 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Frontend Developer',
+    title: 'Développement Frontend',
     icon: design,
-    level: "3",
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    rank: "Apprentice",
+    description: 'Création d’interfaces modernes, responsives et performantes',
+    rank: "Compagnon",
   },
   {
-    title: 'Backend Developer',
+    title: 'Développement Backend',
     icon: gear,
-    level: "2",
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    rank: "Youngling",
-  },
-  {
-    title: 'UI/UX Design',
-    icon: bulb,
-    level: "1",
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Mise en place d’APIs sécurisées et de bases de données efficaces',
     rank: "Novice",
   },
   {
     title: 'SEO',
     icon: magnifyingGlass,
     level: "1",
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Optimisation du contenu et de la structure de vos sites',
+    rank: "Apprenti",
+  },
+  {
+    title: 'UI/UX Design',
+    icon: bulb,
+    level: "1",
+    description: 'Conception d’interfaces intuitives et esthétiques',
     rank: "Novice",
   },
 ];
@@ -107,10 +101,6 @@ const technologies = [
   {
     name: 'JavaScript',
     icon: javascript,
-  },
-  {
-    name: 'TypeScript',
-    icon: typescript,
   },
   {
     name: 'Tailwind CSS',
@@ -137,10 +127,6 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: 'Jquery',
-    icon: jquery,
-  },
-  {
     name: 'Prestashop',
     icon: prestashop,
   },
@@ -161,28 +147,28 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Self-study',
+    title: 'Apprentissage autodidacte',
     company_name: 'HTML CSS JS',
     icon: book,
     iconBg: '#0F1226',
     date: '2014',
   },
   {
-    title: 'eCommerce Website Creation',
+    title: 'Création site e-commerce',
     company_name: 'Prestashop',
     icon: computer,
     iconBg: '#0F1226',
     date: '2015',
   },
   {
-    title: 'Web Developer Certification',
+    title: 'Formation développeur web',
     company_name: 'Openclassrooms',
     icon: diploma,
     iconBg: '#0F1226',
     date: '2018',
   },
   {
-    title: 'Front-end Developer Certification',
+    title: 'Formation Intégrateur web',
     company_name: 'Openclassrooms',
     icon: diploma,
     iconBg: '#0F1226',
@@ -194,19 +180,13 @@ const projects = [
   {
     id: 'project-1',
     name: 'Booki',
-    description: 'A comic characters list app that displays Marvel characters.',
+    description: 'Création de la page d\'accueil d\'une agence de voyage',
     tags: [
       {
-        name: 'react',
-        color: 'blue-text-gradient',
+        name: 'html',
       },
       {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
+        name: 'css',
       },
     ],
     image: booki,
@@ -215,93 +195,67 @@ const projects = [
   },
   {
     id: 'project-2',
-    name: 'Leaderboard',
+    name: 'Ohmyfood',
     description:
-      'A leaderboard list app that displays scores submitted by different players.',
+      'Intégration de la maquette du site en mobile first avec implémentation d\'animations css',
     tags: [
       {
-        name: 'react',
-        color: 'blue-text-gradient',
+        name: 'html',
       },
       {
-        name: 'restapi',
-        color: 'green-text-gradient',
+        name: 'animations css',
       },
       {
-        name: 'scss',
-        color: 'pink-text-gradient',
+        name: 'sass',
       },
+
     ],
-    image: leaderboard,
-    repo: 'https://github.com/shaqdeff/Leaderboard',
-    demo: 'https://shaqdeff.github.io/Leaderboard/',
+    image: ohmyfood,
+    repo: 'https://github.com/BadBadBean/Ohmyfood',
+    demo: 'https://badbadbean.github.io/Ohmyfood/',
   },
   {
     id: 'project-3',
-    name: 'Math Magicians',
-    description: 'This is a single-page calculator app built with React',
+    name: 'Nina Carducci',
+    description: 'Optimisation du référencement du site grâce à une amélioration de sa performance et de son accessibilité.',
     tags: [
       {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
+        name: 'SEO',
       },
     ],
-    image: math,
-    repo: 'https://github.com/shaqdeff/Math-Magicians',
-    demo: 'https://inspiring-medovik-37d3b3.netlify.app/',
+    image: nina,
+    repo: 'https://github.com/BadBadBean/nina_carducci',
+    demo: 'https://badbadbean.github.io/nina_carducci/',
   },
   {
     id: 'project-4',
-    name: 'Movie Metro',
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
+    name: 'Calculateur d\'âge',
+    description: 'Création d\'une application permettant aux utilisateurs de calculer facilement leur âge ',
     tags: [
       {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
+        name: 'react',
       },
       {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
+        name: 'sass',
       },
     ],
-    image: movie,
-    repo: 'https://github.com/shaqdeff/Movie-Metro',
-    demo: 'https://movie-metro.netlify.app/',
+    image: calculAge,
+    repo: 'https://github.com/BadBadBean/age-calculator',
+    demo: 'https://badbadbean.github.io/age-calculator/',
   },
   {
     id: 'project-5',
-    name: 'Nyeusi Fest Site',
+    name: 'Pomodoro',
     description:
-      'This is a demo concert website for a music festival called Nyeusi.',
+      'Création d\'un pomodoro permettant aux utilisateurs de définir leur temps de travail et leur temps de pause',
     tags: [
       {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'supabase',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'css',
-        color: 'pink-text-gradient',
+        name: 'react',
       },
     ],
-    image: nyeusi,
-    repo: 'https://github.com/shaqdeff/Nyeusi-Fest-Site',
-    demo: 'https://shaqdeff.github.io/Nyeusi-Fest-Site/',
+    image: pomodoro,
+    repo: 'https://github.com/BadBadBean/pomodoro',
+    demo: 'https://badbadbean.github.io/pomodoro/',
   },
 ];
 
