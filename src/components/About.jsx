@@ -9,7 +9,7 @@ import SectionHeader from "./SectionHeader";
 const ServiceCard = ({ index, title, icon, description, level, rank }) => {
   const rankColorMap = {
     Compagnon: "#AF6DE7",
-    Apprenti: "#BA4488",
+    Apprentie: "#BA4488",
     Novice: "#3B5A9B",
   };
 

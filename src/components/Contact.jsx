@@ -60,7 +60,7 @@ const Contact = () => {
       {/* Titre */}
       <SectionHeader
   title="Contact"
-  description="N'hésitez pas à m'envoyer un message, je serais ravie d'entendre vos idées et de travailler avec vous sur vos futurs projets !"
+  description="N'hésitez pas à venir me parler de vos projets !"
   imgSrc={portrait}
   imgAlt="Portrait image"
   imgPosition="left"

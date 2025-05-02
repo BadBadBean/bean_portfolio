@@ -74,7 +74,7 @@ const services = [
     icon: magnifyingGlass,
     level: "1",
     description: 'Optimisation du contenu et de la structure de vos sites',
-    rank: "Apprenti",
+    rank: "Apprentie",
   },
   {
     title: 'UI/UX Design',
