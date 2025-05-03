@@ -52,9 +52,9 @@ const ProjectCard = ({
       </div>
 
       <div className={`absolute top-0 left-0 right-0 z-20 bg-[#072d7d] border-8bit px-4 py-2 flex justify-between items-center xl:-mx-4 xl:-mt-4 ${isActive ? "lg:flex" : "lg:hidden"} flex`}>
-        <h2 className="font-bold sm:text-[20px] text-[16px] text-timberWolf uppercase font-jersey truncate">
+        <h3 className="font-bold sm:text-[20px] text-[16px] text-timberWolf uppercase font-jersey truncate">
           {name}
-        </h2>
+        </h3>
         <div
           onClick={(e) => {
             e.stopPropagation();

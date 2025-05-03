@@ -23,11 +23,13 @@ const Navbar = () => {
             setActive('');
             window.scrollTo(0, 0);
           }}>
+          <h1>  
           <img
             src={logo}
-            alt="logo"
+            alt="Portfolio de Delphine"
             className="w-[100px] h-[45px] object-contain"
           />
+          </h1>
         </Link>
 
         {/* Liens de navigation */}

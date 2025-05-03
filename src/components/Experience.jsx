@@ -23,9 +23,9 @@ const ExperienceCard = ({ experience }) => (
     }}
     date={
       <div>
-        <h3 className="text-flashWhite text-[24px] font-jersey">
+        <p className="text-flashWhite text-[24px] font-jersey">
           {experience.date}
-        </h3>
+        </p>
       </div>
     }
     iconStyle={{ background: experience.iconBg }}

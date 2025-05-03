@@ -22,7 +22,7 @@ const Tech = () => {
 />
 
       {/* Technologies */}
-      <div className="mt-14 flex flex-wrap justify-around gap-[2vh] lg:justify-center lg:gap-[8vh] lg:w-[80%] m-auto">
+      <div className="mt-14 flex flex-wrap justify-around gap-[2vh] lg:justify-center lg:gap-[10vh] lg:w-[80%] m-auto">
         {technologies.map((technology) => (
           <div className="w-24 h-24 sm:w-32 sm:h-32" key={technology.name}>
             <BoxCanva icon={technology.icon} />

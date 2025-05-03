@@ -37,7 +37,7 @@ const Hero = () => {
           </div>
 
           <div>
-            <h1
+            <p
               className={`${styles.heroHeadText} text-eerieBlack font-jersey uppercase`}>
               Moi, c&apos;est{' '}
               <span
@@ -46,7 +46,7 @@ const Hero = () => {
                 font-extrabold uppercase">
                 Delphine
               </span>
-            </h1>
+            </p>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack font-jersey`}>
               Bienvenue sur mon portfolio ! <br className="sm:block hidden" />
               Après des heures de bidouilles et de tutos, j’ai décidé de passer au niveau supérieur : faire une reconversion professionnelle et devenir développeuse&nbsp;🚀
