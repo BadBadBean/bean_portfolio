@@ -5,6 +5,7 @@ const SectionHeader = ({
   title,
   description,
   imgSrc,
+  imgAlt = "section image",
   imgPosition = "left",
   className = "",
 }) => {
@@ -24,6 +25,7 @@ const SectionHeader = ({
           <div className="flex justify-center lg:justify-start">
             <img
               src={imgSrc}
+              alt={imgAlt}
               className="max-w-[80px] xmd:max-w-[100px] h-auto object-contain"
             />
           </div>

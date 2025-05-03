@@ -89,10 +89,10 @@ const ProjectCard = ({
         <div className="relative inline-block sm:w-[138px] w-[100px] sm:mt-[22px] mt-[16px] transition-transform duration-150 ease-in-out active:translate-y-1 active:scale-95">
           <button
             className="w-full text-center text-white py-1.5 font-jersey text-s
-              bg-[#76778b] hover:bg-[#3a8eba]
-              active:shadow-[inset_3px_3px_0px_0px_#396e8b]
-              hover:shadow-[inset_-4px_-4px_0px_0px_#396e8b]
-              shadow-[inset_-3px_-3px_0px_0px_#49484e]
+              bg-[#575766] hover:bg-[#3a8eba]
+                active:shadow-[inset_3px_3px_0px_0px_#396e8b]
+                hover:shadow-[inset_-4px_-4px_0px_0px_#396e8b]
+                shadow-[inset_-3px_-3px_0px_0px_#34343d]
               transition duration-200 ease-in-out transform
               flex items-center justify-center gap-1 h-auto z-20 rounded-md"
             onClick={(e) => {

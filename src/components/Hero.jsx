@@ -53,10 +53,10 @@ const Hero = () => {
             </p>
             <button
               className="w-fit text-center text-white py-[0.5em] px-[1em] font-jersey text-[16px] sm:text-[20px]
-                bg-[#76778b] hover:bg-[#3a8eba]
+                bg-[#575766] hover:bg-[#3a8eba]
                 active:shadow-[inset_3px_3px_0px_0px_#396e8b]
                 hover:shadow-[inset_-4px_-4px_0px_0px_#396e8b]
-                shadow-[inset_-3px_-3px_0px_0px_#49484e]
+                shadow-[inset_-3px_-3px_0px_0px_#34343d]
                 transition duration-200 ease-in-out transform
                 flex items-center justify-center gap-1 h-auto z-20 rounded-md mt-8"
               onClick={() =>
@@ -78,8 +78,8 @@ const Hero = () => {
               VOIR MON CV
               <img
                 src={arrowRightWhite}
-                alt="cliquez pour voir mon cv"
                 className="download-btn w-[18px] h-[18px] object-contain"
+                alt=""
               />
             </button>
           </div>

@@ -60,6 +60,7 @@ const Experience = () => {
   description="Un petit résumé de mon parcours dans le milieu du développement web."
   imgSrc={reversePortrait}
   imgPosition="right"
+  imgAlt=""
   className="mb-10"
 />
 

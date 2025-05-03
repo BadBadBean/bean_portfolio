@@ -1,6 +1,6 @@
-import darkbg from './backgrounds/dark-bg.jpg';
-import mainbg from './backgrounds/bg-main.jpg';
-import footerbg from './backgrounds/footer.jpg';
+import darkbg from './backgrounds/dark-bg.webp';
+import mainbg from './backgrounds/bg-main.png';
+import footerbg from './backgrounds/footer.webp';
 
 import mygithub from './logo/github.png';
 import linkedin from './logo/linkedin.png';

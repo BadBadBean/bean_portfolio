@@ -17,6 +17,7 @@ const Tech = () => {
   description="Voici un aperçu des technologies et langages de programmation que j'utilise pour organiser et réaliser mes projets."
   imgSrc={reversePortrait}
   imgPosition="right"
+  imgAlt=""
   className="mb-10"
 />
 

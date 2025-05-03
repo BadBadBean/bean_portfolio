@@ -43,7 +43,7 @@ export default {
         '3xl': '1800px',
       },
       backgroundImage: {
-        site: "url('./assets/backgrounds/bg-main.jpg')",
+        site: "url('./assets/backgrounds/bg-main.png')",
       },
       fontFamily: {
         jersey: ['"Jersey 10"', 'sans-serif'],

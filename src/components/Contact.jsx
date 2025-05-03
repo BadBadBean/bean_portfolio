@@ -63,6 +63,7 @@ const Contact = () => {
   description="N'hésitez pas à venir me parler de vos projets !"
   imgSrc={portrait}
   imgPosition="left"
+  imgAlt=""
   className="mb-10"
 />
 
@@ -74,6 +75,7 @@ const Contact = () => {
         <form ref={formRef} onSubmit={handleSubmit} className="font-jersey">
           <div className="input-group">
             <input
+            id="name"
               type="text"
               name="name"
               value={form.name}
@@ -81,10 +83,11 @@ const Contact = () => {
               required
               placeholder=" "
             />
-            <label>Votre Nom</label>
+            <label htmlFor="name">Votre Nom</label>
           </div>
           <div className="input-group">
             <input
+                id="email"
               type="email"
               name="email"
               value={form.email}
@@ -92,11 +95,12 @@ const Contact = () => {
               required
               placeholder=" "
             />
-            <label>Votre e-mail</label>
+            <label htmlFor="email">Votre e-mail</label>
           </div>
           <div className="input-group">
             <textarea
               rows="5"
+              id="message"
               name="message"
               value={form.message}
               onChange={handleChange}
@@ -104,7 +108,7 @@ const Contact = () => {
               placeholder=" "
               className="h-24 sm:h-40 md:h-48"
             />
-            <label>Votre message</label>
+            <label htmlFor="message">Votre message</label>
           </div>
 
           {/* Bouton d’envoi */}
@@ -113,10 +117,10 @@ const Contact = () => {
             <button
               type="submit"
               className="w-full text-center text-white py-1.5 font-jersey text-[16px] sm:text-[20px]
-                bg-[#76778b] hover:bg-[#3a8eba]
+                bg-[#575766] hover:bg-[#3a8eba]
                 active:shadow-[inset_3px_3px_0px_0px_#396e8b]
                 hover:shadow-[inset_-4px_-4px_0px_0px_#396e8b]
-                shadow-[inset_-3px_-3px_0px_0px_#49484e]
+                shadow-[inset_-3px_-3px_0px_0px_#34343d]
                 transition duration-200 ease-in-out transform
                 flex items-center justify-center gap-1 h-auto z-20 rounded-md"
             >

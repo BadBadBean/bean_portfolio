@@ -8,7 +8,7 @@ import SectionHeader from "./SectionHeader";
 
 const ServiceCard = ({ index, title, icon, description, rank }) => {
   const rankColorMap = {
-    Compagnon: "#AF6DE7",
+    Compagnon: "#761FC1",
     Apprentie: "#BA4488",
     Novice: "#3B5A9B",
   };
@@ -60,6 +60,7 @@ const About = () => {
             title="Services"
             description="Découvrez mes domaines de compétences qui me permettront de réaliser vos projets."
             imgSrc={portrait}
+            imgAlt=""
             imgPosition="left"
             className="mb-10"
           />
